@@ -18,7 +18,7 @@ async def test_sichuan_example():
     )
     
     model = MockFoodieQAModel(config.model_config)
-    await run_experiment(config, model, output_dir="results")
+    await run_experiment(config, model, output_dir="eval/results")
 
 if __name__ == "__main__":
     asyncio.run(test_sichuan_example())
