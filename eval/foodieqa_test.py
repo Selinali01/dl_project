@@ -6,7 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from .model.enums import ModelArchitecture, TaskType
 from .model.response_model import FoodieQAResponse
-from .model.base_model import BaseModel
+from .model.base_model import BaseFoodieQAModel
 
 @dataclass 
 class ExperimentConfig:
@@ -116,41 +116,55 @@ def create_test_file(test_case: TestCase) -> None:
 
 async def run_experiment(
     config: ExperimentConfig,
-    model: BaseModel,
+    model: BaseFoodieQAModel,
     output_dir: str = "results"
 ) -> None:
     """Run experiment and save results"""
     os.makedirs(output_dir, exist_ok=True)
     test_results = []
-    test_dir = Path("tests")
+    
+    # Get project root directory
+    project_root = Path(__file__).parent.parent
     
     # Run tests
     for test_file in config.test_files:
-        with open(test_dir / test_file / "test.json", "r") as f:
-            test_case = TestCase.from_dict(json.load(f))
-            
-        # Load images if needed
-        images = None
-        if test_case.image_paths:
-            images = [str(test_dir / test_file / img_path) 
-                     for img_path in test_case.image_paths]
-            
-        # Get prediction
-        prediction = await model.predict(
-            question=test_case.question,
-            images=images,
-            context=test_case.context_info
-        )
+        test_path = project_root / test_file / "test.json"
+        print(f"Looking for test file at: {test_path}")
         
-        # Evaluate
-        accuracy = evaluate_prediction(prediction.answer, test_case.ground_truth)
-        
-        # Store result
-        test_results.append(TestResult(
-            test_case_id=test_case.id,
-            predicted=prediction,
-            accuracy=accuracy
-        ))
+        try:
+            with open(test_path, "r") as f:
+                test_case = TestCase.from_dict(json.load(f))
+                
+            # Load images if needed
+            images = None
+            if test_case.image_paths:
+                images = [str(project_root / test_file / img_path) 
+                         for img_path in test_case.image_paths]
+                
+            # Get prediction
+            prediction = await model.predict(
+                question=test_case.question,
+                images=images,
+                context=test_case.context_info
+            )
+            
+            # Evaluate
+            accuracy = evaluate_prediction(prediction.answer, test_case.ground_truth)
+            
+            # Store result
+            test_results.append(TestResult(
+                test_case_id=test_case.id,
+                predicted=prediction,
+                accuracy=accuracy
+            ))
+        except FileNotFoundError:
+            print(f"Error: Test file not found at {test_path}")
+            print("Current directory:", os.getcwd())
+            print("Available files in directory:")
+            parent_dir = test_path.parent
+            if parent_dir.exists():
+                print(list(parent_dir.glob('**/*')))
+            raise
     
     # Compute aggregate metrics
     avg_accuracy = sum(r.accuracy for r in test_results) / len(test_results)

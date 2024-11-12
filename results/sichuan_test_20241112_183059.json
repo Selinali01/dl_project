@@ -1,0 +1,26 @@
+{
+  "experiment_name": "sichuan_test",
+  "model_architecture": "base",
+  "task_type": "mivqa",
+  "model_config": {
+    "task_type": "mivqa",
+    "model_name": "mock-foodieqa"
+  },
+  "language": "zh",
+  "timestamp": "2024-11-12T18:30:59.999681",
+  "test_results": [
+    {
+      "test_case_id": "sichuan_dishes/test1",
+      "predicted": {
+        "answer": "C",
+        "confidence": 0.8246945865626573,
+        "supporting_info": null
+      },
+      "accuracy": 0.0,
+      "error_analysis": null
+    }
+  ],
+  "aggregate_metrics": {
+    "accuracy": 0.0
+  }
+}
