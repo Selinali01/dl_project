@@ -1,3 +1,4 @@
 venv/
 FoodieQA/cachehr/
 FoodieQA/data_folder/
+FoodieQA/model-eval/scripts/__pycache__
