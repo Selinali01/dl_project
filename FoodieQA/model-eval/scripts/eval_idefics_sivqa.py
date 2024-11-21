@@ -79,7 +79,7 @@ def main(args):
     template = args.template
     out_dir = args.out_dir
     
-    sivqa = sivqa_utils.read_sivqa(data_dir)
+    sivqa = sivqa_utils.read_sivqa(data_dir, eval_file)
     
     out_file_name = "sivqa_" + args.model_name.split("/")[-1] + "_%s"%args.lang + "_prompt" + str(template) + ".jsonl"
     os.makedirs(out_dir, exist_ok=True)
@@ -101,10 +101,10 @@ def main(args):
 
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
-    argparser.add_argument("--cache_dir", default="/scratch3/wenyan/cache")
-    argparser.add_argument("--data_dir", default="/scratch3/wenyan/data/foodie")
-    argparser.add_argument("--eval_file", type=str, default="sivqa_filtered_bi.json")
-    argparser.add_argument("--out_dir", default="/scratch3/wenyan/data/foodie/results/sivqa_res")
+    argparser.add_argument("--cache_dir", default="FoodieQA\\cachehr")
+    argparser.add_argument("--data_dir", default="FoodieQA\\data_folder")
+    argparser.add_argument("--eval_file", type=str, default="sivqa_tidy.json")
+    argparser.add_argument("--out_dir", default="FoodieQA\\output")
     argparser.add_argument("--model_name", default="TIGER-Lab/Mantis-8B-Idefics2") # "TIGER-Lab/Mantis-8B-Idefics2" "HuggingFaceM4/idefics2-8b"
     argparser.add_argument("--show_food_name", action="store_true", default=False)
     argparser.add_argument("--hide_img", action="store_true", default=False)

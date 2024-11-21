@@ -3,8 +3,8 @@ import json
 import os
 
 
-def read_sivqa(data_dir):
-    question_file = os.path.join(data_dir, "sivqa_filtered_bi.json")
+def read_sivqa(data_dir, file_name="sivqa_tidy.json"):
+    question_file = os.path.join(data_dir, file_name)
     with open(question_file, 'r', encoding='utf-8') as f:
         sivqa = json.load(f)
     return sivqa
