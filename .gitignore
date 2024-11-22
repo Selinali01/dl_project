@@ -1,4 +1,9 @@
 venv/
+foodie_env/
 FoodieQA/cachehr/
 FoodieQA/data_folder/
 FoodieQA/model-eval/scripts/__pycache__
+
+**/__pycache__/
+FoodieQA/rag/wikipedia/recipe_db/
+**/recipe_db/

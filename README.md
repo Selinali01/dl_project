@@ -38,3 +38,5 @@ eval/
 ### Support Files
 - `model/enums.py`: Enumerations for model types and tasks
 - `model/builder.py`: Factory class for creating model instances
+
+# source foodie_env/bin/activate
