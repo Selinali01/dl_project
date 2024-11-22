@@ -2,3 +2,5 @@ venv/
 FoodieQA/cachehr/
 FoodieQA/data_folder/
 FoodieQA/model-eval/scripts/__pycache__
+FoodieQA/model-eval/scripts/gpt4osivqa.py/
+node_modules/
