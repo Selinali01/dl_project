@@ -124,5 +124,3 @@ def get_prompt_idefics(question, data_dir, show_food_name=False, template=0, lan
                             ]}
                         ]
     return query_list
-
-

@@ -52,8 +52,8 @@ class Evaluator(object):
             images = [load_image(os.path.join(data_dir, img_file))]
             prompt = processor.apply_chat_template(messages, add_generation_prompt=True)
             inputs = processor(text=prompt, images=images, return_tensors="pt")
-            
-        inputs = {k: v.to() for k, v in inputs.items()}
+        device = model.device
+        inputs = {k: v.to(device) for k, v in inputs.items()}
         generate_ids = model.generate(**inputs, max_new_tokens=500)
         # remove input tokens 
         generate_ids = generate_ids[:, inputs['input_ids'].shape[1]:]

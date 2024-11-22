@@ -20,7 +20,13 @@ class Evaluator(object):
         """Send a question and image to GPT-4 Vision API for evaluation."""
         question = sivqa[idx]
         # Build the text prompt
-        prompt = f"Question: {question['question']}\nOptions: A, B, C, D.\nPlease choose the most appropriate answer."
+        prompt = f"""Question: {question['question']}\nOptions: A, B, C, D.\nPlease choose the most appropriate answer. IMPORTANT FORMATTING INSTRUCTIONS:
+                    Make sure that your final output is ONLY a single letter, indicating your multiple answer choice. Do not provide any reasoning, explanation, extra character(s) in your final response, and ONLY output either A, B, C or D. For example, if the question is: The food in the picture belongs to which cuisine?
+                    A. Sichuan cuisine [Correct]
+                    B. Xinjiang cuisine
+                    C. Cantonese cuisine
+                    D. Northern Chinese cuisine
+                    Then your output should be: A"""
         # Prepare messages
         messages = [
             {
@@ -91,11 +97,10 @@ def main(args):
     print(f"Results saved to {os.path.join(args.out_dir, out_file_name)}")
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
-    # argparser.add_argument("--api_key", type=str, default="", 
-    #                       help="OpenAI API key")
+    # argparser.add_argument("--api_key", type=str, default="", help="OpenAI API key")
     argparser.add_argument("--data_dir", default="FoodieQA\\data_folder",
                           help="Directory containing the dataset")
-    argparser.add_argument("--eval_file", type=str, default="sivqa_tidy.json",
+    argparser.add_argument("--eval_file", type=str, default="test.json",
                           help="Evaluation file name")
     argparser.add_argument("--out_dir", default="FoodieQA\\output",
                           help="Output directory for results")

@@ -3,7 +3,7 @@ from sklearn.metrics import accuracy_score
 
 # Paths to the JSON files
 ground_truth_file = "FoodieQA\\data_folder\\sivqa_tidy.json"
-predictions_file = "FoodieQA\\output\\sivqa_Mantis-8B-Idefics2_zh_prompt0.jsonl"
+predictions_file = "FoodieQA\output\sivqa_gpt-4o-mini_prompt0_zh.jsonl"
 ans_map = {"A": "1", "B": "2", "C": "3", "D": "4"}
 
 
