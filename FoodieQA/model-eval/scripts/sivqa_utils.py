@@ -1,6 +1,7 @@
 # Human: {question} Here are the options: {options} Assistant: If had to select one of the options, my answer would be (
 import json
 import os
+#from rag.wikipedia.inspect_db import ChromaInspector
 
 
 def read_sivqa(data_dir, file_name="sivqa_tidy.json"):
@@ -62,6 +63,7 @@ def format_text_prompt(q, choices_str, template=0, lang="zh"):
             return ["{} These are the options: {} Please select one of the options as your answer.".format(q, choices_str), "I would select ("]
             # return "Human: {} These are the options: {} Please select one of the options as your answer. Assistant: I would select (".format(q, choices_str)
         
+
 
 def get_prompt_qwen(question, data_dir, show_food_name=False, use_web_img=False, template=0, lang="zh"):
     # for qwen model
@@ -126,3 +128,26 @@ def get_prompt_idefics(question, data_dir, show_food_name=False, template=0, lan
     return query_list
 
 
+
+'''
+        if template == 5:  # New RAG template
+            def _format_rag_context(food_name):
+                inspector = ChromaInspector()
+                entries = inspector.get_dish_entries(food_name)
+                if not entries:
+                    return ""
+                entry = entries[0]
+                aspects = ['cuisine_type', 'flavor', 'region', 'main_ingredient', 'cooking_skills']
+                context = []
+                for aspect in aspects:
+                    info = inspector.extract_info(entry['content'], aspect)
+                    if info:
+                        context.append(f"{aspect}: {'; '.join(info)}")
+                return "\n".join(context)
+                
+            context = _format_rag_context(q.get("food_name", ""))
+            return [
+                f"Based on this context:\n{context}\nQuestion: {q}\nOptions: {choices_str}",
+                "Based on the context and image, I select ("
+            ]
+        '''

@@ -1,0 +1,4 @@
+{"response": "B", "ground_truth": "C", "correct": 0, "qid": "vqa-0"}
+{"response": "A", "ground_truth": "C", "correct": 0, "qid": "vqa-1"}
+{"response": "A", "ground_truth": "B", "correct": 0, "qid": "vqa-2"}
+{"response": "A", "ground_truth": "C", "correct": 0, "qid": "vqa-6"}

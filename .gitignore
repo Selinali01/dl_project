@@ -10,3 +10,6 @@ FoodieQA/rag/wikipedia/recipe_db/
 
 FoodieQA/rag/xiachufang/last_recipe_page.html
 FoodieQA/rag/xiachufang/last_search_page.html
+
+
+.env
