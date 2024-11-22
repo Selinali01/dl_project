@@ -1,142 +1,138 @@
 from recipe_db import LocalRecipeDB
 import json
-from typing import Dict, List, Tuple
+from typing import Dict, List
 import re
 
 class ChromaInspector:
     def __init__(self):
         self.db = LocalRecipeDB()
+        self.question_types = {
+            'cuisine_type': "菜系 cuisine traditional origin",
+            'flavor': "taste flavor characteristics 口味 味道",
+            'region': "region location geographical origin 地区 产地",
+            'present': "presentation appearance plating 外形 样式",
+            'cooking_skills': "cooking method preparation technique 烹饪 制作",
+            'main_ingredient': "ingredients components 主料 配料"
+        }
         
-    def extract_info_by_question_type(self, query: Dict) -> Tuple[str, List[str]]:
-        """
-        Extract relevant search terms and keywords based on question type
-        Returns: (search_query, relevant_content_patterns)
-        """
-        question_type = query.get("question_type")
-        food_name = query.get("food_name")
-        choices = query.get("choices", [])
+        # Move patterns definition into __init__
+        self.patterns = {
+            'cuisine_type': {
+                'keywords': ['cuisine', '菜系', 'traditional', 'origin'],
+                'patterns': [
+                    r'Cuisine Type: ([^\.]+)',
+                    r'From its origins in ([^\.]+)',
+                ]
+            },
+            'flavor': {
+                'keywords': ['spicy', 'sweet', 'sour', 'taste', 'flavor', '口味', '味道'],
+                'patterns': [
+                    r'is a ([^,]+), ([^,]+) Chinese dish',
+                    r'flavors? include[s]? ([^\.]+)',
+                ]
+            },
+            'region': {
+                'keywords': ['region', 'province', 'origins', '地区', '产地'],
+                'patterns': [
+                    r'From its origins in ([^\.]+)',
+                    r'popular in ([^\.]+)',
+                ]
+            },
+            'present': {
+                'keywords': ['made with', 'served', 'presentation', '外形', '样式'],
+                'patterns': [
+                    r'made with ([^\.]+)',
+                    r'served with ([^\.]+)',
+                ]
+            },
+            'cooking_skills': {
+                'keywords': ['stir-fried', 'cooked', 'preparation', '烹饪', '制作'],
+                'patterns': [
+                    r'is a [^,]*, ([^,]*-[^,]* dish)',
+                    r'prepared by ([^\.]+)',
+                ]
+            },
+            'main_ingredient': {
+                'keywords': ['made with', 'ingredients', 'contains', '主料', '配料'],
+                'patterns': [
+                    r'made with ([^\.]+)',
+                    r'containing ([^\.]+)',
+                ]
+            }
+        }
+
+    
+    def get_dish_entries(self, dish_name: str) -> List[Dict]:
+        """Get all entries for a specific dish"""
+        entries = self.get_all_entries()
+        return [entry for entry in entries 
+                if entry['metadata'].get('dish_name') == dish_name]
+    
+    
+    def inspect_dish(self, dish_name: str):
+        """Inspect a specific dish across all question types"""
+        print(f"\n=== Analysis of '{dish_name}' ===\n")
         
-        search_terms = []
-        content_patterns = []
+        dish_entries = self.get_dish_entries(dish_name)
+        if not dish_entries:
+            print(f"No entries found for dish: {dish_name}")
+            return
+            
+        for entry in dish_entries:
+            print(f"\nAnalyzing entry: {entry['id']}")
+            print("\nBase Information:")
+            print(f"Cuisine Type: {entry['metadata'].get('cuisine_type', 'Not specified')}")
+            print(f"English Name: {entry['metadata'].get('english_name', 'Not specified')}")
+            
+            print("\nAspect Analysis:")
+            for aspect in self.patterns.keys():
+                print(f"\n{aspect.upper()}:")
+                info = self.extract_info(entry['content'], aspect)
+                if info:
+                    for i, text in enumerate(info, 1):
+                        # Clean up the output
+                        if len(text) > 100:  # If text is too long
+                            # Try to find a shorter relevant phrase
+                            shorter = re.split(r'[,.]', text)[0]
+                            print(f"{i}. {shorter}")
+                        else:
+                            print(f"{i}. {text}")
+                else:
+                    print("No specific information found")
+    def extract_info(self, content: str, aspect: str) -> List[str]:
+        """Extract relevant information for a specific aspect"""
+        info = set()  # Use set to avoid duplicates from the start
+        patterns = self.patterns[aspect]['patterns']
         
-        if question_type == "cuisine_type":
-            # Look for cuisine type mentions
-            search_terms = [food_name, "cuisine", "菜系"]
-            content_patterns = [
-                r"Cuisine Type:\s*(.*)",
-                r"菜系:\s*(.*)",
-                r"cuisine of",
-                food_name
-            ]
-
-        elif question_type == "region":
-            # Look for regional information
-            search_terms = [food_name, "region", "origin", "provincial"]
-            content_patterns = [
-                r"found in the cuisines of(.*?)\.",
-                r"originated in(.*?)\.",
-                r"traditional dish from(.*?)\.",
-                food_name
-            ]
-
-        elif question_type == "flavor":
-            # Look for flavor descriptions
-            search_terms = [food_name, "taste", "flavor", "texture"]
-            content_patterns = [
-                r"characterized by(.*?)\.",
-                r"flavored with(.*?)\.",
-                r"tastes(.*?)\.",
-                food_name
-            ]
-
-        elif question_type == "presentation":
-            # Look for serving and presentation details
-            search_terms = [food_name, "served", "presented", "accompanies"]
-            content_patterns = [
-                r"served with(.*?)\.",
-                r"presented(.*?)\.",
-                r"accompanied by(.*?)\.",
-                food_name
-            ]
-
-        elif question_type == "cooking_skills":
-            # Look for cooking methods and techniques
-            search_terms = [food_name, "prepared", "cooked", "method"]
-            content_patterns = [
-                r"prepared by(.*?)\.",
-                r"cooked(.*?)\.",
-                r"method includes(.*?)\.",
-                food_name
-            ]
-
-        elif question_type == "main_ingredient":
-            # Look for main ingredients
-            search_terms = [food_name, "made with", "ingredients", "contains"]
-            content_patterns = [
-                r"main ingredients?(.*?)\.",
-                r"made with(.*?)\.",
-                r"contains(.*?)\.",
-                food_name
-            ]
-
-        search_query = " ".join(search_terms)
-        return search_query, content_patterns
-
-    def extract_relevant_content(self, content: str, patterns: List[str]) -> str:
-        """Extract relevant portions of content based on patterns"""
-        relevant_parts = []
-        
+        # Try each pattern
         for pattern in patterns:
             matches = re.finditer(pattern, content, re.IGNORECASE)
             for match in matches:
-                if match.groups():
-                    relevant_parts.append(match.group(1).strip())
-                else:
-                    # If no capture group, get the context around the match
-                    start = max(0, match.start() - 50)
-                    end = min(len(content), match.end() + 50)
-                    relevant_parts.append(content[start:end].strip())
-                    
-        return "\n".join(relevant_parts) if relevant_parts else ""
-
-    def answer_question(self, query: Dict) -> Dict:
-        """
-        Answer a specific question using the database
-        Returns: {
-            'answer': str,
-            'evidence': str,
-            'confidence': float
-        }
-        """
-        search_query, content_patterns = self.extract_info_by_question_type(query)
+                info.add(match.group(1).strip())
         
-        # Search the database
-        results = self.db.search_recipes(search_query, n_results=3)
+        # Find relevant sentences containing keywords
+        keywords = self.patterns[aspect]['keywords']
+        sentences = [s.strip() for s in content.split('.') if s.strip()]
+        for sentence in sentences:
+            if any(keyword.lower() in sentence.lower() for keyword in keywords):
+                # Don't add full metadata block or repetitive content
+                if not (sentence.startswith('Title:') or 
+                    sentence.startswith('Chinese Name:') or 
+                    'pinyin:' in sentence):
+                    # Extract just the relevant part if it's a long sentence
+                    for keyword in keywords:
+                        if keyword.lower() in sentence.lower():
+                            # Find the relevant clause containing the keyword
+                            clauses = sentence.split(',')
+                            relevant_clauses = [c.strip() for c in clauses 
+                                            if keyword.lower() in c.lower()]
+                            if relevant_clauses:
+                                info.add(relevant_clauses[0])
         
-        evidence = []
-        for result in results:
-            relevant_content = self.extract_relevant_content(
-                result['content'], 
-                content_patterns
-            )
-            if relevant_content:
-                evidence.append({
-                    'content': relevant_content,
-                    'distance': result['distance'],
-                    'metadata': result['metadata']
-                })
-        
-        return {
-            'question': query['question'],
-            'food_name': query['food_name'],
-            'question_type': query['question_type'],
-            'choices': query['choices'],
-            'evidence': evidence
-        }
-
+        return list(info)
+                
     def get_all_entries(self) -> List[Dict]:
         """Retrieve all entries from the database"""
-        # Get all IDs from the collection
         collection = self.db.collection
         result = collection.get()
         
@@ -150,72 +146,26 @@ class ChromaInspector:
             entries.append(entry)
             
         return entries
-    
-    def print_database_contents(self):
-        """Print a formatted view of all database contents"""
-        entries = self.get_all_entries()
-        
-        print(f"\n=== Database Contents ({len(entries)} entries) ===\n")
-        
-        for i, entry in enumerate(entries, 1):
-            print(f"\n--- Entry {i} ---")
-            print(f"ID: {entry['id']}")
-            print("\nMetadata:")
-            for key, value in entry['metadata'].items():
-                print(f"  {key}: {value}")
-            print("\nContent Preview:")
-            # Print first 100000 characters of content
-            content_preview = entry['content'][:100000] + "..." if len(entry['content']) > 100000 else entry['content']
-            print(f"  {content_preview}")
-            print("\n" + "="*50)
-    
-    def search_database(self, query: str, n_results: int = 3):
-        """Search the database and show results"""
-        results = self.db.search_recipes(query, n_results)
-        
-        print(f"\n=== Search Results for '{query}' ===\n")
-        
-        for i, result in enumerate(results, 1):
-            print(f"\n--- Result {i} (Distance: {result['distance']:.4f}) ---")
-            print("\nMetadata:")
-            for key, value in result['metadata'].items():
-                print(f"  {key}: {value}")
-            print("\nContent Preview:")
-            content_preview = result['content'][:200] + "..." if len(result['content']) > 200 else result['content']
-            print(f"  {content_preview}")
-            print("\n" + "="*50)
-    
-    def export_to_json(self, filename: str = "recipe_db_dump.json"):
-        """Export the entire database to a JSON file"""
-        entries = self.get_all_entries()
-        
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(entries, f, ensure_ascii=False, indent=2)
-        
-        print(f"\nDatabase exported to {filename}")
 
-def main():
-    inspector = ChromaInspector()
-    
-    # Example question
-    ''''
-    test_question = {
-        "question": "图片中的食物通常属于哪个菜系?",
-        "choices": ["京菜", "徽菜", "新疆菜", "桂菜"],
-        "question_type": "cuisine_type",
-        "food_name": "烤羊肉串"
-    }
-    '''
-    test_question = {
-    "question": "这道菜的口味特点是什么?",
-    "question_type": "flavor",
-    "food_name": "水煮鱼",
-    "choices": ["清淡", "麻辣", "咸鲜", "酸甜"]
-}
-    # Get answer
-    result = inspector.answer_question(test_question)
-    print("\nQuestion Analysis:")
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    def list_dishes(self):
+        """List all unique dish names in the database"""
+        entries = self.get_all_entries()
+        dishes = set()
+        for entry in entries:
+            if 'dish_name' in entry['metadata']:
+                dishes.add(entry['metadata']['dish_name'])
+        return sorted(list(dishes))
 
 if __name__ == "__main__":
-    main()
+    inspector = ChromaInspector()
+    
+    # List available dishes
+    dishes = inspector.list_dishes()
+    print("\nAvailable dishes in database:")
+    for dish in dishes:
+        print(f"- {dish}")
+    
+    # Analyze a specific dish
+    print("\nAnalyzing a sample dish...")
+    inspector.inspect_dish("宫保鸡丁")  # Kung Pao Chicken
+    inspector.inspect_dish("黄鱼烧年糕")

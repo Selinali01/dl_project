@@ -1,0 +1,399 @@
+2024-11-22 01:27:34,351 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:27:34,870 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:27:34,979 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:27:35,051 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:27:36,002 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:27:36,018 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:27:36,807 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:27:39,441 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:27:40,204 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:27:42,623 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:27:43,502 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:27:46,617 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:27:47,296 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:27:47,415 - WARNING - Add of existing embedding ID: recipe_20241122_012747
+2024-11-22 01:27:47,416 - WARNING - Insert of existing embedding ID: recipe_20241122_012747
+2024-11-22 01:27:47,682 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:27:51,272 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:27:51,369 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:30:22,238 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:30:22,455 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:30:22,750 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:30:22,862 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:30:23,247 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:30:23,253 - INFO - Found 3 recipe cards
+2024-11-22 01:30:23,253 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:30:23,255 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:30:24,098 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:30:24,544 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:30:24,544 - DEBUG - Content: 黄鱼烧年糕（一万多一例的菜品在家便宜做）
+作者：
+2 人做过 评分 8.5 716 人做过 评分 8.3 54 人做过 评分 8.6 1990 人做过 评分 8.6 29 人做过 评分 7.4 132 人做过 6 人做过 评分 8.0 14 人做过 3 人做过 评分 8.5 14 人做过 评分 7.8 24 人做过 评分 8.2 116 人做过 评分 7.1 169 人做过 5 人做过 评分 7....
+2024-11-22 01:30:26,391 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:30:26,394 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:30:27,178 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:30:27,425 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:30:27,425 - DEBUG - Content: 黄鱼烧年糕
+作者：
+评分 7.3 46 人做过 4 人做过 评分 7.8 12 人做过 评分 8.4 62 人做过  评分 7.6 266 人做过 评分 8.8 12 人做过 评分 8.7 99 人做过 评分 7.8 6 人做过 评分 8.0 147 人做过 评分 8.7 20 人做过  评分 7.5 8 人做过 评分 8.4 10 人做过 评分 9.0 9 人做过
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:30:29,652 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:30:29,658 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:30:30,415 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:30:30,667 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:30:30,667 - DEBUG - Content: 黄鱼烧年糕
+作者：
+评分 7.3 46 人做过 评分 8.6 28 人做过 评分 7.8 12 人做过 9 人做过 评分 8.9 37 人做过 评分 8.2 15 人做过 评分 7.6 266 人做过 评分 7.2 51 人做过 评分 8.0 147 人做过 评分 8.4 62 人做过 评分 8.4 35 人做过 5 人做过  评分 7.5 8 人做过 4 人做过
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:30:32,930 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:30:33,579 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:30:33,581 - WARNING - Add of existing embedding ID: recipe_20241122_012747
+2024-11-22 01:30:33,705 - WARNING - Insert of existing embedding ID: recipe_20241122_013033
+2024-11-22 01:30:33,705 - WARNING - Add of existing embedding ID: recipe_20241122_013033
+2024-11-22 01:30:34,055 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:30:36,584 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:30:36,682 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:32:08,603 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:32:08,836 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:32:09,121 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:32:09,229 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:32:09,647 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:32:09,662 - INFO - Found 3 recipe cards
+2024-11-22 01:32:09,662 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:32:09,667 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:32:10,428 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:32:10,936 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:32:10,936 - DEBUG - Content: 黄鱼烧年糕（一万多一例的菜品在家便宜做）
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:32:12,042 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:32:12,047 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:32:12,895 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:32:13,148 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:32:13,148 - DEBUG - Content: 黄鱼烧年糕
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:32:16,002 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:32:16,008 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:32:16,781 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:32:17,089 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:32:17,090 - DEBUG - Content: 黄鱼烧年糕
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:32:21,611 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:32:21,615 - WARNING - Add of existing embedding ID: recipe_20241122_012747
+2024-11-22 01:32:21,616 - WARNING - Add of existing embedding ID: recipe_20241122_013033
+2024-11-22 01:32:21,823 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:32:21,965 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:32:56,543 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:32:56,548 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:32:57,057 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:32:57,163 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:32:57,334 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:32:57,343 - INFO - Found 3 recipe cards
+2024-11-22 01:32:57,343 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:32:57,345 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:32:58,139 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:32:58,634 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:32:58,634 - DEBUG - Content: 黄鱼烧年糕（一万多一例的菜品在家便宜做）
+作者：
+2 人做过 评分 8.5 716 人做过 评分 8.3 54 人做过 评分 8.6 1990 人做过 评分 8.6 29 人做过 评分 7.4 132 人做过 6 人做过 评分 8.0 14 人做过 3 人做过 评分 8.5 14 人做过 评分 7.8 24 人做过 评分 8.2 116 人做过 评分 7.1 169 人做过 5 人做过 评分 7....
+2024-11-22 01:32:59,997 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:33:00,003 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:33:00,779 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:33:01,045 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:33:01,046 - DEBUG - Content: 黄鱼烧年糕
+作者：
+评分 7.3 46 人做过 4 人做过 评分 7.8 12 人做过 评分 8.4 62 人做过  评分 7.6 266 人做过 评分 8.8 12 人做过 评分 8.7 99 人做过 评分 7.8 6 人做过 评分 8.0 147 人做过 评分 8.7 20 人做过  评分 7.5 8 人做过 评分 8.4 10 人做过 评分 9.0 9 人做过
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:33:03,022 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:33:03,024 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:33:03,795 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:33:04,056 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:33:04,057 - DEBUG - Content: 黄鱼烧年糕
+作者：
+评分 7.3 46 人做过 评分 8.6 28 人做过 评分 7.8 12 人做过 9 人做过 评分 8.9 37 人做过 评分 8.2 15 人做过 评分 7.6 266 人做过 评分 7.2 51 人做过 评分 8.0 147 人做过 评分 8.4 62 人做过 评分 8.4 35 人做过 5 人做过  评分 7.5 8 人做过 4 人做过
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:33:06,187 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:33:06,901 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:33:06,903 - WARNING - Add of existing embedding ID: recipe_20241122_012747
+2024-11-22 01:33:06,903 - WARNING - Add of existing embedding ID: recipe_20241122_013033
+2024-11-22 01:33:06,997 - WARNING - Add of existing embedding ID: recipe_20241122_013306
+2024-11-22 01:33:06,997 - WARNING - Insert of existing embedding ID: recipe_20241122_013306
+2024-11-22 01:33:07,057 - WARNING - Add of existing embedding ID: recipe_20241122_013306
+2024-11-22 01:33:07,058 - WARNING - Insert of existing embedding ID: recipe_20241122_013306
+2024-11-22 01:33:07,323 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:33:10,354 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:33:10,475 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:34:34,379 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:34:34,897 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:34:35,010 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:34:35,048 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:34:35,979 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:34:35,995 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:34:35,998 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:34:36,802 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:34:40,121 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:34:40,125 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:34:41,099 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:34:43,889 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:34:43,895 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:34:44,784 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:34:47,754 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:34:48,368 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:34:48,373 - WARNING - Add of existing embedding ID: recipe_20241122_012747
+2024-11-22 01:34:48,373 - WARNING - Add of existing embedding ID: recipe_20241122_013033
+2024-11-22 01:34:48,373 - WARNING - Add of existing embedding ID: recipe_20241122_013306
+2024-11-22 01:34:48,373 - WARNING - Add of existing embedding ID: recipe_20241122_013306
+2024-11-22 01:34:48,498 - WARNING - Insert of existing embedding ID: recipe_20241122_013448
+2024-11-22 01:34:48,498 - WARNING - Add of existing embedding ID: recipe_20241122_013448
+2024-11-22 01:34:48,788 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:34:51,312 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:34:51,438 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:35:21,877 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:35:21,882 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:35:22,393 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:35:22,521 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:35:22,652 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:35:22,667 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:35:22,672 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:35:23,550 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:35:25,023 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:35:25,028 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:35:25,848 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:35:28,852 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:35:28,857 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:35:29,739 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:35:31,512 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:35:32,088 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:35:32,212 - WARNING - Add of existing embedding ID: recipe_20241122_013532
+2024-11-22 01:35:32,212 - WARNING - Insert of existing embedding ID: recipe_20241122_013532
+2024-11-22 01:35:32,517 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:35:35,040 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:35:35,166 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:37:00,137 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:37:00,138 - INFO - Search URL: https://m.xiachufang.com/search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001
+2024-11-22 01:37:00,398 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:37:00,713 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:37:00,821 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:37:01,138 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:37:01,150 - INFO - Selector 'a.recipe-96-horizon' found 15 links
+2024-11-22 01:37:01,151 - INFO - Selector 'div.recipe-item a' found 0 links
+2024-11-22 01:37:01,151 - INFO - Selector 'a[href*="/recipe/"]' found 15 links
+2024-11-22 01:37:01,152 - INFO - Selector '.recipe-card a' found 0 links
+2024-11-22 01:37:01,153 - INFO - Selector '.recipe-link' found 0 links
+2024-11-22 01:37:01,153 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:37:04,200 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:37:05,258 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:37:05,604 - INFO - Extracted content length: 11193
+2024-11-22 01:37:05,604 - DEBUG - Extracted content: 用APP打开 黄鱼烧年糕（一万多一例的菜品在家便宜做） 8.2万人浏览 7296人收藏 83人做过 APP中查看更多做法 作者： 以前猪都不如现在如了 深水养殖的黄鱼，在口味上接近野生黄鱼的品质。
+米其林餐厅“新荣记”的这款黄鱼烧年糕，用的是东海野生黄鱼，一斤以上的大黄鱼价格普遍在万元以上，吃起来实在有点肉痛。
+今天我们就花几十块钱，用深水养殖大黄鱼来做一下这款菜品。
+野生大黄鱼区别于养殖黄鱼，首先胸鳍长度可以完整盖住鱼眼睛；其次尾柄修长；最后他的嘴唇是蜡黄色；最最后价格贵得离谱。野生黄鱼是奢侈品，宴请贵客时候的档次加成占了价格的大头。深海网箱养殖的，口味已经很接近野生了。大黄鱼在联合国生物多样性公约上级别是“极危”而大熊猫仅仅是“濒危”，就放过它们吧。
+
+更多米其林和黑珍珠餐厅菜品请移步：
+
+“炳胜公馆”黑椒炒肉蟹https://www.xiachufang.com/recipe/106818011/
+“荣叔黄鱼面”台州黄鱼米面https://www.xiachufang.com/recipe/106721446/
+“新荣记”家烧东海三鲜https://www.xiachufang....
+2024-11-22 01:37:05,606 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:37:09,406 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:37:10,193 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:37:10,448 - INFO - Extracted content length: 6285
+2024-11-22 01:37:10,448 - DEBUG - Extracted content: 用APP打开 黄鱼烧年糕 3.2万人浏览 2113人收藏 37人做过 APP中查看更多做法 作者： 老方额半夜灶披间 这个菜我也是在哪本杂志上看到的，就拿来主义一下。说到黄鱼上海人民还是很喜欢的，硬生生的把野生黄鱼都快吃绝了。现在野生大黄鱼是吃不起了，也很难吃到了。我们做菜就买买小黄鱼，只要新鲜就好。这里要补充一下，小黄鱼不是小时候的大黄鱼，是2个种类。小黄鱼再大也是小黄鱼，大黄鱼再小也是大黄鱼。 用料 小黄鱼 条 年糕 克 蒜 瓣 姜 片 黄鱼烧年糕的做法步骤 步骤 1 原料：黄鱼，蒜瓣，姜片，年糕 步骤 2 黄鱼洗干净后用厨房纸尽量吸干表面水分，以免煎的时候油飞溅出来。锅烧热转中小火，倒油，放入姜片和去皮的蒜瓣慢慢煎。等到姜片和蒜瓣有点焦黄了放入黄鱼。煎黄鱼的时候不要频繁翻动，稍微推一下锅，如果鱼能顺利的在锅底滑动那就能翻面了。 步骤 3 等两面都煎好了倒入料酒去腥，加生抽、老抽、糖和几粒花椒，然后加热水盖过鱼加盖焖煮10分钟。关于加几粒花椒是因为梁实秋先生的一篇文章 “黄鱼有一定的汛季，在平津一带，春夏之交是黄鱼上市的时候。到这时候，几乎家家都大吃黄鱼。我家的习惯，是焖煮黄鱼一大...
+2024-11-22 01:37:10,450 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:37:13,508 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:37:14,359 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:37:14,614 - INFO - Extracted content length: 6456
+2024-11-22 01:37:14,614 - DEBUG - Extracted content: 用APP打开 黄鱼烧年糕 3883人浏览 104人收藏 0人做过 APP中查看更多做法 作者： 小包家御用厨师 1.水要多一点，没过鱼，火要大，最好开盖煮。
+2.最好用五花肉，或者猪油。
+3.洋葱能够提味。
+
+烧鱼一定要咸一点才能入味(特别是汤汁一定要咸)。鱼要清洗特别干净不然影响口感，特别是肚子最上面有时候不好拉出来，最好用剪刀剪一下，不然怕苦胆挖破。
+
+最好汤汁用杂鱼汤 用料 黄鱼 一条 年糕 一把 五花肉 50克 葱 俩根 蒜 4瓣 姜 8片 洋葱 少许 白糖 1/4 胡椒粉 1/2勺 味极鲜酱油 1/2勺 盐 适量 蚝油 半勺 鸡精 一丢丢 辣椒 半根 料酒 3勺 黄鱼烧年糕的做法步骤 步骤 1 鱼一定要很新鲜那种。
+
+1.黄鱼去鳞，拔掉鱼头上鳞片(这部分腥味重)。在鱼的排泄口上面一厘米左右切一刀，深2cm左右(肠子切断方便拔出来)，用俩根筷子分别从嘴里伸进去，压着鱼鳃伸进去，转俩圈，就可以把肠子拔出来(不要先拔腮，不然后面不好出来）。
+
+
+2.将鱼轻轻改刀(别切太深），冲洗干净，稍微抹一点盐，放边上晾干。(尽可能的把血冲洗干净，不然会腥，特别是鱼头和肚子里里外外挖干净)
+
+3...
+2024-11-22 01:37:14,654 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:37:15,423 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:37:15,426 - WARNING - Add of existing embedding ID: recipe_20241122_013532
+2024-11-22 01:37:15,558 - WARNING - Insert of existing embedding ID: recipe_20241122_013715
+2024-11-22 01:37:15,559 - WARNING - Add of existing embedding ID: recipe_20241122_013715
+2024-11-22 01:37:15,758 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:37:22,325 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:37:22,464 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:38:37,228 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:38:37,481 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:38:37,743 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:38:37,841 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:38:38,250 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:38:38,262 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:38:39,007 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:38:39,504 - INFO - Extracted content length: 20
+2024-11-22 01:38:39,505 - DEBUG - Extracted content: 黄鱼烧年糕（一万多一例的菜品在家便宜做）...
+2024-11-22 01:38:41,893 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:38:42,780 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:38:43,042 - INFO - Extracted content length: 5
+2024-11-22 01:38:43,042 - DEBUG - Extracted content: 黄鱼烧年糕...
+2024-11-22 01:38:45,739 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:38:46,576 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:38:46,835 - INFO - Extracted content length: 5
+2024-11-22 01:38:46,835 - DEBUG - Extracted content: 黄鱼烧年糕...
+2024-11-22 01:38:53,983 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:38:54,097 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:41:34,980 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:41:35,495 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:41:35,500 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:41:35,616 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:41:36,286 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:41:36,300 - INFO - Found 3 recipe cards
+2024-11-22 01:41:36,300 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:41:36,304 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:41:37,107 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:41:37,600 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:41:37,600 - DEBUG - Content: 黄鱼烧年糕（一万多一例的菜品在家便宜做）
+作者：
+2 人做过 评分 8.5 716 人做过 评分 8.3 54 人做过 评分 8.6 1990 人做过 评分 8.6 29 人做过 评分 7.4 132 人做过 6 人做过 评分 8.0 14 人做过 3 人做过 评分 8.5 14 人做过 评分 7.8 24 人做过 评分 8.2 116 人做过 评分 7.1 169 人做过 5 人做过 评分 7....
+2024-11-22 01:41:39,857 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:41:39,862 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:41:40,641 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:41:40,960 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:41:40,960 - DEBUG - Content: 黄鱼烧年糕
+作者：
+评分 7.3 46 人做过 4 人做过 评分 7.8 12 人做过 评分 8.4 62 人做过  评分 7.6 266 人做过 评分 8.8 12 人做过 评分 8.7 99 人做过 评分 7.8 6 人做过 评分 8.0 147 人做过 评分 8.7 20 人做过  评分 7.5 8 人做过 评分 8.4 10 人做过 评分 9.0 9 人做过
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:41:43,275 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:41:43,281 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:41:44,082 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:41:44,357 - INFO - Successfully extracted recipe from https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:41:44,357 - DEBUG - Content: 黄鱼烧年糕
+作者：
+评分 7.3 46 人做过 评分 8.6 28 人做过 评分 7.8 12 人做过 9 人做过 评分 8.9 37 人做过 评分 8.2 15 人做过 评分 7.6 266 人做过 评分 7.2 51 人做过 评分 8.0 147 人做过 评分 8.4 62 人做过 评分 8.4 35 人做过 5 人做过  评分 7.5 8 人做过 4 人做过
+
+
+
+用料：
+
+
+烹饪步骤：
+...
+2024-11-22 01:41:45,626 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:41:46,242 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:41:46,367 - WARNING - Add of existing embedding ID: recipe_20241122_014146
+2024-11-22 01:41:46,367 - WARNING - Insert of existing embedding ID: recipe_20241122_014146
+2024-11-22 01:41:46,636 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:41:48,655 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:41:48,771 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:42:24,128 - INFO - Searching for dish: 黄鱼烧年糕
+2024-11-22 01:42:24,129 - INFO - Search URL: https://m.xiachufang.com/search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001
+2024-11-22 01:42:24,134 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:42:24,626 - DEBUG - Starting new HTTPS connection (1): us.i.posthog.com:443
+2024-11-22 01:42:24,749 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:42:25,077 - DEBUG - https://m.xiachufang.com:443 "GET /search/?keyword=%E9%BB%84%E9%B1%BC%E7%83%A7%E5%B9%B4%E7%B3%95&cat=1001 HTTP/11" 200 None
+2024-11-22 01:42:25,089 - INFO - Selector 'a.recipe-96-horizon' found 15 links
+2024-11-22 01:42:25,091 - INFO - Selector 'div.recipe-item a' found 0 links
+2024-11-22 01:42:25,092 - INFO - Selector 'a[href*="/recipe/"]' found 15 links
+2024-11-22 01:42:25,093 - INFO - Selector '.recipe-card a' found 0 links
+2024-11-22 01:42:25,094 - INFO - Selector '.recipe-link' found 0 links
+2024-11-22 01:42:25,094 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/106657632/
+2024-11-22 01:42:28,234 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:42:29,172 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/106657632/ HTTP/11" 200 None
+2024-11-22 01:42:29,798 - INFO - Extracted content length: 11193
+2024-11-22 01:42:29,799 - DEBUG - Extracted content: 用APP打开 黄鱼烧年糕（一万多一例的菜品在家便宜做） 8.2万人浏览 7296人收藏 83人做过 APP中查看更多做法 作者： 以前猪都不如现在如了 深水养殖的黄鱼，在口味上接近野生黄鱼的品质。
+米其林餐厅“新荣记”的这款黄鱼烧年糕，用的是东海野生黄鱼，一斤以上的大黄鱼价格普遍在万元以上，吃起来实在有点肉痛。
+今天我们就花几十块钱，用深水养殖大黄鱼来做一下这款菜品。
+野生大黄鱼区别于养殖黄鱼，首先胸鳍长度可以完整盖住鱼眼睛；其次尾柄修长；最后他的嘴唇是蜡黄色；最最后价格贵得离谱。野生黄鱼是奢侈品，宴请贵客时候的档次加成占了价格的大头。深海网箱养殖的，口味已经很接近野生了。大黄鱼在联合国生物多样性公约上级别是“极危”而大熊猫仅仅是“濒危”，就放过它们吧。
+
+更多米其林和黑珍珠餐厅菜品请移步：
+
+“炳胜公馆”黑椒炒肉蟹https://www.xiachufang.com/recipe/106818011/
+“荣叔黄鱼面”台州黄鱼米面https://www.xiachufang.com/recipe/106721446/
+“新荣记”家烧东海三鲜https://www.xiachufang....
+2024-11-22 01:42:29,799 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/104072315/
+2024-11-22 01:42:33,162 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:42:34,072 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/104072315/ HTTP/11" 200 None
+2024-11-22 01:42:34,403 - INFO - Extracted content length: 6285
+2024-11-22 01:42:34,403 - DEBUG - Extracted content: 用APP打开 黄鱼烧年糕 3.2万人浏览 2113人收藏 37人做过 APP中查看更多做法 作者： 老方额半夜灶披间 这个菜我也是在哪本杂志上看到的，就拿来主义一下。说到黄鱼上海人民还是很喜欢的，硬生生的把野生黄鱼都快吃绝了。现在野生大黄鱼是吃不起了，也很难吃到了。我们做菜就买买小黄鱼，只要新鲜就好。这里要补充一下，小黄鱼不是小时候的大黄鱼，是2个种类。小黄鱼再大也是小黄鱼，大黄鱼再小也是大黄鱼。 用料 小黄鱼 条 年糕 克 蒜 瓣 姜 片 黄鱼烧年糕的做法步骤 步骤 1 原料：黄鱼，蒜瓣，姜片，年糕 步骤 2 黄鱼洗干净后用厨房纸尽量吸干表面水分，以免煎的时候油飞溅出来。锅烧热转中小火，倒油，放入姜片和去皮的蒜瓣慢慢煎。等到姜片和蒜瓣有点焦黄了放入黄鱼。煎黄鱼的时候不要频繁翻动，稍微推一下锅，如果鱼能顺利的在锅底滑动那就能翻面了。 步骤 3 等两面都煎好了倒入料酒去腥，加生抽、老抽、糖和几粒花椒，然后加热水盖过鱼加盖焖煮10分钟。关于加几粒花椒是因为梁实秋先生的一篇文章 “黄鱼有一定的汛季，在平津一带，春夏之交是黄鱼上市的时候。到这时候，几乎家家都大吃黄鱼。我家的习惯，是焖煮黄鱼一大...
+2024-11-22 01:42:34,404 - INFO - Processing recipe URL: https://m.xiachufang.com/recipe/107275867/
+2024-11-22 01:42:37,500 - DEBUG - Starting new HTTPS connection (1): m.xiachufang.com:443
+2024-11-22 01:42:38,324 - DEBUG - https://m.xiachufang.com:443 "GET /recipe/107275867/ HTTP/11" 200 None
+2024-11-22 01:42:38,593 - INFO - Extracted content length: 6456
+2024-11-22 01:42:38,593 - DEBUG - Extracted content: 用APP打开 黄鱼烧年糕 3883人浏览 104人收藏 0人做过 APP中查看更多做法 作者： 小包家御用厨师 1.水要多一点，没过鱼，火要大，最好开盖煮。
+2.最好用五花肉，或者猪油。
+3.洋葱能够提味。
+
+烧鱼一定要咸一点才能入味(特别是汤汁一定要咸)。鱼要清洗特别干净不然影响口感，特别是肚子最上面有时候不好拉出来，最好用剪刀剪一下，不然怕苦胆挖破。
+
+最好汤汁用杂鱼汤 用料 黄鱼 一条 年糕 一把 五花肉 50克 葱 俩根 蒜 4瓣 姜 8片 洋葱 少许 白糖 1/4 胡椒粉 1/2勺 味极鲜酱油 1/2勺 盐 适量 蚝油 半勺 鸡精 一丢丢 辣椒 半根 料酒 3勺 黄鱼烧年糕的做法步骤 步骤 1 鱼一定要很新鲜那种。
+
+1.黄鱼去鳞，拔掉鱼头上鳞片(这部分腥味重)。在鱼的排泄口上面一厘米左右切一刀，深2cm左右(肠子切断方便拔出来)，用俩根筷子分别从嘴里伸进去，压着鱼鳃伸进去，转俩圈，就可以把肠子拔出来(不要先拔腮，不然后面不好出来）。
+
+
+2.将鱼轻轻改刀(别切太深），冲洗干净，稍微抹一点盐，放边上晾干。(尽可能的把血冲洗干净，不然会腥，特别是鱼头和肚子里里外外挖干净)
+
+3...
+2024-11-22 01:42:38,629 - DEBUG - WARNING: No ONNX providers provided, defaulting to available providers: ['CoreMLExecutionProvider', 'AzureExecutionProvider', 'CPUExecutionProvider']
+2024-11-22 01:42:39,320 - DEBUG - Starting component PersistentLocalHnswSegment
+2024-11-22 01:42:39,455 - WARNING - Insert of existing embedding ID: recipe_20241122_014239
+2024-11-22 01:42:39,456 - WARNING - Add of existing embedding ID: recipe_20241122_014239
+2024-11-22 01:42:39,694 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
+2024-11-22 01:42:46,768 - DEBUG - Starting new HTTPS connection (2): us.i.posthog.com:443
+2024-11-22 01:42:46,860 - DEBUG - https://us.i.posthog.com:443 "POST /batch/ HTTP/11" 200 15
