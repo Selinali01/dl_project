@@ -80,7 +80,7 @@ class ChromaInspector:
         
         return matches
     
-    def export_to_json(self, filename: str = "recipe_db_dump.json"):
+    def export_to_json(self, filename: str = "recipe_db_dump_zh.json"):
         """Export the entire database to a JSON file"""
         entries = self.get_all_entries()
         
