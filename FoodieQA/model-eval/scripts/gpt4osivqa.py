@@ -18,7 +18,7 @@ class GPT4oEvaluator:
         # Get formatted question, image path, and choices using sivqa_utils
         q, img_path, choices_str, food_name = sivqa_utils.format_question(
             question, 
-            lang="en",
+            lang="zh",
             show_food_name=show_food_name
         )
         
@@ -149,7 +149,7 @@ def main():
         results.append(result)
 
         # Save results after each question (in case of interruption)
-        output_file = os.path.join(args.output_dir, f'results_template{args.template}.jsonl')
+        output_file = os.path.join(args.output_dir, f'results_template{args.template}_zh.jsonl')
         with open(output_file, 'w') as f:
             for r in results:
                 f.write(json.dumps(r) + '\n')
@@ -167,7 +167,7 @@ def main():
         "show_food_name": args.show_food_name
     }
     
-    with open(os.path.join(args.output_dir, f'summary_template{args.template}.json'), 'w') as f:
+    with open(os.path.join(args.output_dir, f'summary_template{args.template}_zh.json'), 'w') as f:
         json.dump(summary, f, indent=2)
 
 if __name__ == "__main__":

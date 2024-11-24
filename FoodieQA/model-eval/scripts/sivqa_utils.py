@@ -56,6 +56,27 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
         if template == 4:
             return ["{} 这是选项: {} 请根据上图从所提供的选项中选择一个正确答案。请保证你的答案清晰简洁并输出字母选项。".format(q, choices_str), "我选择（"]
             # return "用户：{} 这是选项: {} 请根据上图从所提供的选项中选择一个正确答案。智能助手：我选择（".format(q, choices_str)
+        if template == 5:  # New RAG template
+            def _format_rag_context(food_name):
+                inspector = ChromaInspector()
+                entries = inspector.get_dish_entries(food_name)
+                if not entries:
+                    return ""
+                entry = entries[0]
+                # aspects = ['cuisine_type', 'flavor', 'region', 'main_ingredient', 'cooking_skills']
+                # context = []
+                # for aspect in aspects:
+                #     info = inspector.extract_info(entry['content'], aspect)
+                #     if info:
+                #         context.append(f"{aspect}: {'; '.join(info)}")
+                context = entry["content"]
+                return "\n".join(context)
+                
+            context = _format_rag_context(food_name=food_name)
+            return [
+                f"根据以下内容：\n{context}\n问题：{q}\n选项：{choices_str}",
+                "根据上下文和图片，我选择（"
+            ]
     else:
         if template == 0:
             return "{} Here are the options: {} If had to select one of the options, my answer would be (".format(q, choices_str)
