@@ -12,7 +12,7 @@ def analyze_performance_by_question_type():
     type_stats = defaultdict(lambda: {'correct': 0, 'total': 0})
     
     # Process results file
-    with open('results_template1.jsonl', 'r', encoding='utf-8') as f:
+    with open('resultszh_template1.jsonl', 'r', encoding='utf-8') as f:
         for line in f:
             result = json.loads(line)
             question_id = result['question_id']
@@ -71,7 +71,7 @@ def analyze_performance_by_question_type():
     }
 
     # Save results
-    with open('performance_analysis.json', 'w', encoding='utf-8') as f:
+    with open('performance_analysis_zh.json', 'w', encoding='utf-8') as f:
         json.dump(performance_analysis, f, indent=2, ensure_ascii=False)
 
     # Print summary

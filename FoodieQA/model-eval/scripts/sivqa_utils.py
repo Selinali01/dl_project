@@ -62,7 +62,44 @@ def format_text_prompt(q, choices_str, template=0, lang="zh"):
         if template == 3:
             return ["{} These are the options: {} Please select one of the options as your answer.".format(q, choices_str), "I would select ("]
             # return "Human: {} These are the options: {} Please select one of the options as your answer. Assistant: I would select (".format(q, choices_str)
-        
+        if template == 4:
+            return [
+                "{} These are the options: {} Looking at the image carefully, I will examine each detail before selecting an answer.".format(q, choices_str),
+                "After careful consideration, I select ("
+            ]
+        if template == 5:
+            return [
+                "You are an AI assistant. Please answer the following multiple choice question based on the image: {} Here are the options: {} To answer, I will examine the ingredients, preparation methods, visual style, and distinctive features that might indicate its origin and characteristics.".format(q, choices_str),
+                "Based on these specific visual observations, I select ("
+            ]
+        if template == 6:
+            return [
+                "You are an AI assistant. Please answer the following multiple choice question based on the image. First, I'll identify what aspect this question is asking about (region, flavor, cuisine type, ingredients, presentation, or cooking skills). Question: {} Here are the options: {}".format(q, choices_str),
+                "After analyzing the image according to the question type, I select ("
+            ]
+        '''
+        if template == 6:
+            # First, create question-type specific guidance
+            question_guides = {
+                "region": "I will look for distinctive ingredients, cooking methods, and presentation styles that are characteristic of different regions.",
+                "flavor": "I will examine the ingredients, cooking method, and visual indicators of seasoning and preparation.",
+                "cuisine_type": "I will analyze the cooking style, ingredients, and presentation that are typical of different cuisines.",
+                "main-ingredient": "I will identify the prominent ingredients visible in the dish.",
+                "present": "I will carefully observe what is physically shown in the image.",
+                "cooking-skills": "I will look at the preparation method, cutting technique, and cooking style evident in the dish."
+            }
+            
+            # Get the question type from the question object (you'll need to add this as a parameter)
+            question_type = question.get("question_type", "")
+            guide = question_guides.get(question_type, "")
+            
+            return [
+                "You are an AI assistant. Please answer the following multiple choice question based on the image: {} Here are the options: {} {}".format(
+                    q, choices_str, guide
+                ),
+                "Based on these visual indicators, I select ("
+            ]
+        '''
 
 
 def get_prompt_qwen(question, data_dir, show_food_name=False, use_web_img=False, template=0, lang="zh"):
