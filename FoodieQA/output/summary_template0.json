@@ -1,7 +1,7 @@
 {
   "template": 0,
-  "total_questions": 29,
-  "total_correct": 13,
-  "accuracy": 0.4482758620689655,
+  "total_questions": 256,
+  "total_correct": 152,
+  "accuracy": 0.59375,
   "show_food_name": false
 }

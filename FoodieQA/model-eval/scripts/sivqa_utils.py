@@ -1,7 +1,11 @@
 # Human: {question} Here are the options: {options} Assistant: If had to select one of the options, my answer would be (
 import json
 import os
-#from rag.wikipedia.inspect_db import ChromaInspector
+import sys
+sys.path.insert(0,"D:\\cs5787\\final\\dl_project\\FoodieQA\\rag\\wikipedia" )
+print(sys.path)
+from inspect_db import ChromaInspector
+
 
 
 def read_sivqa(data_dir, file_name="sivqa_tidy.json"):
@@ -34,10 +38,11 @@ def format_question(question, lang="zh", show_food_name=False, use_web_img=False
         img = question["food_meta"]["food_file"]
     
     choices_str = format_choices(choices)
+    food_name = question["food_name"]
     
-    return q, img, choices_str
+    return q, img, choices_str, food_name
 
-def format_text_prompt(q, choices_str, template=0, lang="zh"):
+def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
     if lang == "zh":
         if template == 0:
             return "{} 选项有: {}, 请根据上图从所提供的选项中选择一个正确答案，为（".format(q, choices_str)
@@ -62,6 +67,27 @@ def format_text_prompt(q, choices_str, template=0, lang="zh"):
         if template == 3:
             return ["{} These are the options: {} Please select one of the options as your answer.".format(q, choices_str), "I would select ("]
             # return "Human: {} These are the options: {} Please select one of the options as your answer. Assistant: I would select (".format(q, choices_str)
+        if template == 5:  # New RAG template
+            def _format_rag_context(food_name):
+                inspector = ChromaInspector()
+                entries = inspector.get_dish_entries(food_name)
+                if not entries:
+                    return ""
+                entry = entries[0]
+                # aspects = ['cuisine_type', 'flavor', 'region', 'main_ingredient', 'cooking_skills']
+                # context = []
+                # for aspect in aspects:
+                #     info = inspector.extract_info(entry['content'], aspect)
+                #     if info:
+                #         context.append(f"{aspect}: {'; '.join(info)}")
+                context = entry["content"]
+                return "\n".join(context)
+                
+            context = _format_rag_context(food_name=food_name)
+            return [
+                f"Based on this context:\n{context}\nQuestion: {q}\nOptions: {choices_str}",
+                "Based on the context and image, I select ("
+            ]
         
 
 

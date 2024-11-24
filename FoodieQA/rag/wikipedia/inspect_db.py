@@ -56,6 +56,29 @@ class ChromaInspector:
             content_preview = result['content'][:200] + "..." if len(result['content']) > 200 else result['content']
             print(f"  {content_preview}")
             print("\n" + "="*50)
+
+    def get_dish_entries(self, food_name: str) -> List[Dict]:
+        """Search the database for entries matching a specific food name."""
+        entries = self.get_all_entries()
+        matches = [entry for entry in entries if entry['metadata'].get('dish_name') == food_name]
+        print(matches)
+        
+        if matches:
+            print(f"\n=== Entries Matching Food Name '{food_name}' ===\n")
+            for i, match in enumerate(matches, 1):
+                print(f"\n--- Match {i} ---")
+                print(f"ID: {match['id']}")
+                print("\nMetadata:")
+                for key, value in match['metadata'].items():
+                    print(f"  {key}: {value}")
+                print("\nContent Preview:")
+                content_preview = match['content'][:200] + "..." if len(match['content']) > 200 else match['content']
+                print(f"  {content_preview}")
+                print("\n" + "="*50)
+        else:
+            print(f"No entries found for food name: {food_name}")
+        
+        return matches
     
     def export_to_json(self, filename: str = "recipe_db_dump.json"):
         """Export the entire database to a JSON file"""

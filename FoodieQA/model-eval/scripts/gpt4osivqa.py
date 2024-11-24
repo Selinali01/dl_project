@@ -16,14 +16,14 @@ class GPT4oEvaluator:
 
     def evaluate_question(self, question, data_dir, template=0, show_food_name=False):
         # Get formatted question, image path, and choices using sivqa_utils
-        q, img_path, choices_str = sivqa_utils.format_question(
+        q, img_path, choices_str, food_name = sivqa_utils.format_question(
             question, 
             lang="en",
             show_food_name=show_food_name
         )
         
         # Use their template formatting
-        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="en")
+        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="en", food_name = food_name)
         
         # If prompt is a list (for templates 2-4), join with appropriate formatting
         if isinstance(prompt, list):
@@ -105,17 +105,17 @@ class GPT4oEvaluator:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", 
-                       default="/Users/selinali/dl_project/FoodieQA/data_folder",
+                       default="D:\\cs5787\\final\dl_project\\FoodieQA\\data_folder",
                        help="Directory containing the dataset")
     parser.add_argument("--output_dir", 
-                       default="/Users/selinali/dl_project/FoodieQA/output",
+                       default="D:\\cs5787\\final\\dl_project\\FoodieQA\\output",
                        help="Output directory for results")
     parser.add_argument("--eval_file", 
                        default="sivqa_tidy.json",
                        help="Evaluation file name")
     parser.add_argument("--template", 
                        type=int, 
-                       default=0,
+                       default=5,
                        help="Prompt template number (0-4)")
     parser.add_argument("--show_food_name", 
                        action="store_true", 

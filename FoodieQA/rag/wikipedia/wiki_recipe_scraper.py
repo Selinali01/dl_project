@@ -121,8 +121,8 @@ class WikiRecipeScraper:
     def search_wiki_page(self, dish_name: str, cuisine_type: str) -> Optional[Dict]:
         """Search for a dish on Wikipedia and extract relevant information"""
         try:
-            # Get English translations for the dish
             translations = self.dish_translations.get(dish_name, [dish_name])
+            # translations = [dish_name]
             
             # Try each translation
             page = None
