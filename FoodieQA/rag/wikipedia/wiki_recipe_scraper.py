@@ -34,7 +34,7 @@ class WikiRecipeScraper:
             "宫保鸡丁": ["Kung Pao chicken", "Gongbao chicken"],
             "酸菜鱼": ["Fish with pickled mustard greens"],
             "辣椒炒肉": ["Stir-fried pork with chili"], # no related page
-            "麻辣烫": ["Malatang"], # wrong link
+            "麻辣烫": ["Malatang"],
             "毛血旺": ["Mao xue wang"],
             "冒菜": ["Maocai", "Boiled meat in spicy soup"],
             "口水鸡": ["Mouth-watering chicken", "Saliva chicken", "Kou shui ji"], # no related link        
@@ -49,15 +49,15 @@ class WikiRecipeScraper:
             "糖醋丸子": ["Sweet and sour meatballs"], # no related page 
             "酱牛肉": ["Braised beef", "Jiang niu rou"], # no related page
             "手抓羊肉": ["Hand-pulled lamb", "Shou zhua yang rou"], # no related page
-            "猪皮冻": ["Pork jelly", "Pork skin jelly"], # added pork jelly
+            "猪皮冻": ["Pork jelly", "Pork skin jelly"],
             "面皮/凉皮": ["Liang pi", "Cold rice noodles"],
 
             # Guizhou cuisine
-            "凯里酸汤鱼": ["Sour soup fish"], # added sour soup fish
+            "凯里酸汤鱼": ["Sour soup fish"],
             "豆腐圆子": ["Tofu balls", "Doufu yuanzi"], # no related page
             "荷叶粉蒸肉": ["Lotus leaf steamed pork"], # no related page
             "水城烙锅": ["Shuicheng lao guo", "Water town pot"], # no related page
-            "辣子鸡": ["laziji", "Spicy chicken", "La zi ji"],
+            "辣子鸡": ["laziji", "Spicy chicken"],
             "丝娃娃": ["Si wa wa", "Guizhou lettuce wraps"],
 
             # Jiangsu cuisine
@@ -79,8 +79,8 @@ class WikiRecipeScraper:
             "虾饺": ["Har gow", "Shrimp dumplings"],
             "煲仔饭": ["Claypot rice", "Bo zai fan"],
             "咖喱牛腩牛筋面": ["Curry beef brisket noodles"], # no related page
-            "鱼丸粉": ["Fish ball", "Fish ball noodles"], # added fish ball, no page
-            "脆皮烧鹅": ["Roast goose"], # Crispy roast goose -> roast goose
+            "鱼丸粉": ["Fish ball", "Fish ball noodles"],
+            "脆皮烧鹅": ["Roast goose"], #
             "清蒸鲈鱼": ["Steamed bass"], # no related page
             "干炒牛河": ["Beef chow fun"],
             "陈皮牛肉丸": ["Steamed meatballs", "chenpi", "Dried tangerine peel beef balls"], # added steamed meatballs, chenpi, no related page
@@ -94,7 +94,7 @@ class WikiRecipeScraper:
             "红烧牛肉": ["Red braised beef"], # no related page
             "荔枝肉": ["Lychee pork"],
             "姜母鸭": ["Ginger mother duck"], # no related page
-            "同安封肉": ["Tong'an wrapped pork"], # changed
+            "同安封肉": ["Tong'an wrapped pork"], 
             "白切鸡": ["White cut chicken", "Bai qie ji"],
             "西湖醋鱼": ["West Lake vinegar fish"],
             "黄鱼烧年糕": ["Yellow croaker with rice cakes"], # no related pages
@@ -105,9 +105,9 @@ class WikiRecipeScraper:
             "锅包肉": ["Guo bao rou", "Northeastern sweet and sour pork"],
             "拉皮": ["Liangpi", "La pi", "Mung bean sheets"],
             "大碴子粥": ["Da cha zi zhou", "Corn porridge"], # no related page
-            "内蒙烤全羊": ["Khorkhog", "Inner Mongolian whole roasted lamb"], # added Khorkhog
+            "内蒙烤全羊": ["Khorkhog", "Inner Mongolian whole roasted lamb"],
             "鸭血粉丝汤": ["Duck blood vermicelli soup"],
-            "酒酿圆子": ["Tangyuan", "Rice wine sweet rice balls"], # added tangyuan
+            "酒酿圆子": ["Tangyuan", "Rice wine sweet rice balls"], 
             "客家酿豆腐": ["Hakka stuffed tofu"],
             "北京烤鸭": ["Peking duck", "Beijing roast duck"]
         }
