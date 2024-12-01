@@ -2,7 +2,8 @@
 import json
 import os
 import sys
-sys.path.insert(0,"D:\\cs5787\\final\\dl_project\\FoodieQA\\rag\\wikipedia" )
+sys.path.insert(0,"C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\rag\\wikipedia" )
+sys.path.insert(0,"C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\rag\\baidu" )
 print(sys.path)
 from inspect_db import ChromaInspector
 
@@ -30,7 +31,10 @@ def format_question(question, lang="zh", show_food_name=False, use_web_img=False
         choices = question["choices_en"]
     
     if show_food_name:
-        q = q.replace("图片中的食物", question["food_name"])
+        if lang == "zh":
+            q = q.replace("图片中的食物", question["food_name"])
+        else:
+            q = q.replace("The food in the picture", question["food_name"])
     
     if use_web_img and "web_file" in question["food_meta"]:
         img = question["food_meta"]["web_file"]
@@ -47,7 +51,7 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
         if template == 0:
             return "{} 选项有: {}, 请根据上图从所提供的选项中选择一个正确答案，为（".format(q, choices_str)
         if template == 1:
-            return "你是一个人工智能助手，请你看图回答以下选择题：{} 选项有: {}, 请从中选择一个正确答案，为（".format(q, choices_str)
+            return "你是一个人工智能助手，请你看图 回答以下选择题：{} 选项有: {}, 请从中选择一个正确答案，为（".format(q, choices_str)
         if template == 2:
             return ["你是一个智能助手，现在请看图回答以下选择题：{} 选项有: {}".format(q, choices_str), "我从所提供的选项中选择一个正确答案，为（"]
             # return "用户：你是一个智能助手，现在请看图回答以下选择题：{} 选项有: {}, 智能助手：我从所提供的选项中选择一个正确答案，为（".format(q, choices_str)
@@ -77,6 +81,55 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
                 f"根据以下内容：\n{context}\n问题：{q}\n选项：{choices_str}",
                 "根据上下文和图片，我选择（"
             ]
+        
+        if template == 6:
+            def _format_rag_context(food_name, json_db):
+                """
+                Format the context using data from the JSON database.
+                :param food_name: Name of the food item to search for.
+                :param json_db: The JSON database loaded as a dictionary.
+                :return: Formatted context string.
+                """
+                # Attempt to find the dish by its name in the JSON keys
+                entry = json_db.get(food_name)
+                
+                if not entry:
+                    return "未找到与该食品名称相关的内容。"
+
+                # Extract relevant fields from the entry
+                dish_name = entry.get("dish_name", food_name)
+                cuisine_type = entry.get("cuisine_type", "未知菜系")
+                description = entry.get("description", "暂无描述。")
+                ingredients = entry.get("ingredients", [])
+                steps = entry.get("steps", [])
+                url = entry.get("url", "无可用链接。")
+
+                # Format the context
+                context = "\n".join([
+                    f"菜名: {dish_name}",
+                    f"菜系: {cuisine_type}",
+                    f"描述: {description if description else 'no descriptions'}",
+                    f"配料: {', '.join(ingredients) if ingredients else 'no ingredients'}",
+                    "步骤:",
+                    "\n".join(steps) if steps else "no steps",
+                    f"参考链接: {url}"
+                ])
+                return context
+
+            # Load the JSON database (assuming it's already in memory or loaded previously)
+            with open("C:\\Users\\choyd\\cs5787\\final\\dl_project\\FoodieQA\\rag\\baidu\\baidu_recipe_db\\all_recipes.json", "r", encoding="utf-8") as f:
+                json_db = json.load(f)
+
+            # Format the context for the given food name
+            context = _format_rag_context(food_name=food_name, json_db=json_db)
+
+            # Return the prompt for the VQA system
+            return [
+                f"根据以下内容：\n{context}\n问题：{q}\n选项：{choices_str}",
+                "根据上下文和图片，我选择（"
+            ]
+
+        
     else:
         if template == 0:
             return "{} Here are the options: {} If had to select one of the options, my answer would be (".format(q, choices_str)
@@ -109,6 +162,7 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
                 f"Based on this context:\n{context}\nQuestion: {q}\nOptions: {choices_str}",
                 "Based on the context and image, I select ("
             ]
+        
         
 
 

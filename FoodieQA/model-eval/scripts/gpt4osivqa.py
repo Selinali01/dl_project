@@ -23,8 +23,7 @@ class GPT4oEvaluator:
         )
         
         # Use their template formatting
-        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="en", food_name = food_name)
-        
+        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="zh", food_name = food_name)        
         # If prompt is a list (for templates 2-4), join with appropriate formatting
         if isinstance(prompt, list):
             system_prompt = prompt[0]
@@ -105,21 +104,21 @@ class GPT4oEvaluator:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", 
-                       default="D:\\cs5787\\final\dl_project\\FoodieQA\\data_folder",
+                       default="C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\data_folder",
                        help="Directory containing the dataset")
     parser.add_argument("--output_dir", 
-                       default="D:\\cs5787\\final\\dl_project\\FoodieQA\\output",
+                       default="C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\output",
                        help="Output directory for results")
     parser.add_argument("--eval_file", 
                        default="sivqa_tidy.json",
                        help="Evaluation file name")
     parser.add_argument("--template", 
                        type=int, 
-                       default=5,
-                       help="Prompt template number (0-4)")
+                       default=6,
+                       help="Prompt template number")
     parser.add_argument("--show_food_name", 
                        action="store_true", 
-                       default=False,
+                       default=True,
                        help="Whether to show food name in prompt")
     parser.add_argument("--api_key", 
                        type=str, 
@@ -149,7 +148,7 @@ def main():
         results.append(result)
 
         # Save results after each question (in case of interruption)
-        output_file = os.path.join(args.output_dir, f'results_template{args.template}_zh.jsonl')
+        output_file = os.path.join(args.output_dir, f'baidu_results_template{args.template}_zh.jsonl')
         with open(output_file, 'w') as f:
             for r in results:
                 f.write(json.dumps(r) + '\n')
@@ -167,7 +166,7 @@ def main():
         "show_food_name": args.show_food_name
     }
     
-    with open(os.path.join(args.output_dir, f'summary_template{args.template}_zh.json'), 'w') as f:
+    with open(os.path.join(args.output_dir, f'baidu_summary_template{args.template}_zh.json'), 'w') as f:
         json.dump(summary, f, indent=2)
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ import re
 class WikiRecipeScraper:
     def __init__(self):
         self.db = LocalRecipeDB()
-        wikipedia.set_lang('zh')
+        wikipedia.set_lang('en')
         
         # Dictionary of Chinese dish names to English translations
         self.dish_translations = {
@@ -121,8 +121,8 @@ class WikiRecipeScraper:
     def search_wiki_page(self, dish_name: str, cuisine_type: str) -> Optional[Dict]:
         """Search for a dish on Wikipedia and extract relevant information"""
         try:
-            # translations = self.dish_translations.get(dish_name, [dish_name])
-            translations = [dish_name]
+            translations = self.dish_translations.get(dish_name, [dish_name])
+            # translations = [dish_name]
             
             # Try each translation
             page = None
