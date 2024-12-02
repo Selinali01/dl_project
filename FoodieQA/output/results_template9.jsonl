@@ -1,0 +1,10 @@
+{"question_id": "vqa-0", "response": "B", "ground_truth": "C", "correct": 0}
+{"question_id": "vqa-1", "response": "B", "ground_truth": "C", "correct": 0}
+{"question_id": "vqa-6", "response": "B", "ground_truth": "C", "correct": 0}
+{"question_id": "vqa-8", "response": "B", "ground_truth": "B", "correct": 1}
+{"question_id": "vqa-10", "response": "B", "ground_truth": "D", "correct": 0}
+{"question_id": "vqa-13", "response": "B", "ground_truth": "D", "correct": 0}
+{"question_id": "vqa-16", "response": "B", "ground_truth": "D", "correct": 0}
+{"question_id": "vqa-18", "response": "B", "ground_truth": "C", "correct": 0}
+{"question_id": "vqa-19", "response": "B", "ground_truth": "D", "correct": 0}
+{"question_id": "vqa-21", "response": "B", "ground_truth": "B", "correct": 1}

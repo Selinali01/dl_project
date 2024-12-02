@@ -5,7 +5,6 @@ from tqdm import tqdm
 import sivqa_utils
 from dotenv import load_dotenv
 import argparse
-import re
 
 load_dotenv()
 
@@ -14,16 +13,6 @@ class GPT4oEvaluator:
         self.client = openai.OpenAI(api_key=api_key or os.getenv('OPENAI_API_KEY'))
         self.total_correct = 0
         self.total_questions = 0
-
-    def _extract_letter(self, response):
-        """Extract any A, B, C, or D that appears after 'Final Answer:', ignoring other formatting"""
-        
-        # Look for "Final Answer:" followed by any characters until we find A, B, C, or D
-        match = re.search(r"Final Answer:.*?([ABCD])", response, re.IGNORECASE)
-        if match:
-            return match.group(1).upper()
-        
-        return 'X'  # Return X if no valid letter found
 
     def evaluate_question(self, question, data_dir, template=0, show_food_name=False):
         # Get formatted question, image path, and choices using sivqa_utils
@@ -42,18 +31,13 @@ class GPT4oEvaluator:
             user_expectation = prompt[1]
         else:
             system_prompt = prompt
-            user_expectation = "After your analysis, please end your response with 'Final Answer: [X]' where X is your chosen option (A, B, C, or D)."
+            user_expectation = "Please provide only the letter choice as your answer."
 
         # Construct messages for API call
         messages = [
             {
                 "role": "system",
-                "content": """You are a helpful assistant that answers questions about food images.
-                When answering, please:
-                1. Describe what you see in the image
-                2. Analyze the possible options
-                3. Explain your reasoning
-                4. End your response with 'Final Answer: [X]' where X is your chosen option (A, B, C, or D)"""
+                "content": "You are a helpful assistant that answers questions about food images."
             },
             {
                 "role": "user",
@@ -74,21 +58,12 @@ class GPT4oEvaluator:
             response = self.client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=messages,
-                max_tokens=500,
-                temperature=0.7
+                max_tokens=300
             )
-            full_response = response.choices[0].message.content.strip()
-            
-            # Print the full response for debugging
-            print("\n=== Question and Response ===")
-            print(f"Question ID: {question['question_id']}")
-            print(f"Question: {q}")
-            print(f"Choices:\n{choices_str}")
-            print(f"Model's Response:\n{full_response}")
+            answer = response.choices[0].message.content.strip()
             
             # Extract just the letter from response
-            answer = self._extract_letter(full_response)
-            print(f"Extracted Answer: {answer}")
+            answer = self._extract_letter(answer)
             
             # Convert answer string to int before using it
             answer_idx = int(question['answer'])
@@ -96,30 +71,21 @@ class GPT4oEvaluator:
             is_correct = int(answer == ground_truth)
             self.total_correct += is_correct
             self.total_questions += 1
-            
-            print(f"Ground Truth: {ground_truth}")
-            print(f"Correct: {is_correct}")
-            print("=====================\n")
 
             return {
                 "question_id": question["question_id"],
-                "question": q,
-                "choices": choices_str,
                 "response": answer,
-                "full_response": full_response,
                 "ground_truth": ground_truth,
                 "correct": is_correct
             }
 
         except Exception as e:
             print(f"Error processing question: {e}")
+            # Also fix the ground truth calculation in the error case
             answer_idx = int(question['answer'])
             return {
                 "question_id": question["question_id"],
-                "question": q,
-                "choices": choices_str,
                 "response": "ERROR",
-                "full_response": str(e),
                 "ground_truth": chr(ord('A') + answer_idx),
                 "correct": 0
             }
@@ -128,6 +94,13 @@ class GPT4oEvaluator:
         with open(image_path, "rb") as image_file:
             import base64
             return base64.b64encode(image_file.read()).decode('utf-8')
+
+    def _extract_letter(self, response):
+        """Extract the first A, B, C, or D from the response"""
+        for char in response:
+            if char in 'ABCD':
+                return char
+        return 'X'  # Return X if no valid letter found
 
 def main():
     parser = argparse.ArgumentParser()
@@ -163,6 +136,7 @@ def main():
     # Load questions using the specified eval file
     questions = sivqa_utils.read_sivqa(args.data_dir, args.eval_file)
 
+
     # Evaluate all questions
     results = []
     for question in tqdm(questions):
@@ -175,14 +149,14 @@ def main():
         results.append(result)
 
         # Save results after each question (in case of interruption)
-        output_file = os.path.join(args.output_dir, f'results_template{args.template}_verbose.jsonl')
+        output_file = os.path.join(args.output_dir, f'results_template{args.template}.jsonl')
         with open(output_file, 'w') as f:
             for r in results:
                 f.write(json.dumps(r) + '\n')
 
     # Calculate and save final accuracy
     accuracy = evaluator.total_correct / evaluator.total_questions
-    print(f"\nFinal accuracy: {accuracy:.2%}")
+    print(f"Final accuracy: {accuracy:.2%}")
 
     # Save summary
     summary = {
@@ -193,7 +167,7 @@ def main():
         "show_food_name": args.show_food_name
     }
     
-    with open(os.path.join(args.output_dir, f'summary_template{args.template}_verbose.json'), 'w') as f:
+    with open(os.path.join(args.output_dir, f'summary_template{args.template}.json'), 'w') as f:
         json.dump(summary, f, indent=2)
 
 if __name__ == "__main__":

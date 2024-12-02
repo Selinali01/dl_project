@@ -69,38 +69,88 @@ def format_text_prompt(q, choices_str, template=0, lang="zh"):
             ]
         if template == 5:
             return [
-                "You are an AI assistant. Please answer the following multiple choice question based on the image: {} Here are the options: {} To answer, I will examine the ingredients, preparation methods, visual style, and distinctive features that might indicate its origin and characteristics.".format(q, choices_str),
-                "Based on these specific visual observations, I select ("
+                "You are an AI assistant analyzing a food image. Question: {} Options: {}\n\nLet me break this down:\n1. Visual Characteristics:\n   - Appearance:\n   - Colors:\n   - Textures:\n2. Key Ingredients/Components:\n   - Main ingredients:\n   - Cooking method:\n3. Cultural/Regional Indicators:\n   - Presentation style:\n   - Distinctive features:\n\nNow evaluating each option based on these observations...".format(q, choices_str),
+                "After careful analysis of these factors, I select ("
             ]
         if template == 6:
             return [
                 "You are an AI assistant. Please answer the following multiple choice question based on the image. First, I'll identify what aspect this question is asking about (region, flavor, cuisine type, ingredients, presentation, or cooking skills). Question: {} Here are the options: {}".format(q, choices_str),
                 "After analyzing the image according to the question type, I select ("
             ]
-        '''
-        if template == 6:
-            # First, create question-type specific guidance
+        
+        if template == 7:
             question_guides = {
-                "region": "I will look for distinctive ingredients, cooking methods, and presentation styles that are characteristic of different regions.",
-                "flavor": "I will examine the ingredients, cooking method, and visual indicators of seasoning and preparation.",
-                "cuisine_type": "I will analyze the cooking style, ingredients, and presentation that are typical of different cuisines.",
-                "main-ingredient": "I will identify the prominent ingredients visible in the dish.",
-                "present": "I will carefully observe what is physically shown in the image.",
-                "cooking-skills": "I will look at the preparation method, cutting technique, and cooking style evident in the dish."
+                "region": "I will examine regional cooking styles, ingredients, and presentation methods.",
+                "flavor": "I will analyze visible ingredients, cooking methods, and seasoning indicators.",
+                "cuisine_type": "I will look for characteristic cooking techniques and ingredient combinations.",
+                "main-ingredient": "I will identify key visible ingredients in the dish.",
+                "present": "I will focus on the visual presentation and arrangement.",
+                "cooking-skills": "I will assess preparation methods and cooking techniques."
             }
             
-            # Get the question type from the question object (you'll need to add this as a parameter)
-            question_type = question.get("question_type", "")
-            guide = question_guides.get(question_type, "")
-            
             return [
-                "You are an AI assistant. Please answer the following multiple choice question based on the image: {} Here are the options: {} {}".format(
-                    q, choices_str, guide
-                ),
-                "Based on these visual indicators, I select ("
+                "You are an AI assistant. Please answer this food-related question: {} Options: {} First, I'll determine what aspect this question is focusing on by analyzing the question and its options. Then, I'll examine the image accordingly, paying special attention to ingredients, preparation methods, visual characteristics, and cultural indicators.".format(q, choices_str),
+                "Based on my analysis, I select ("
             ]
-        '''
+        
+        if template == 8:
+            return "You are an AI assistant. Please identify the food in the picture first. Then, please answer the following multiple choice question based on the image: {} Here are the options: {} Please select one of the options as your answer (".format(q, choices_str)
+        if template == 9:
+            return [
+                "You are an AI assistant. Let me first analyze the food in this image:\n\n1. Dish Identification:\n   - What type of dish this appears to be\n   - Key visible components\n   - Overall presentation\n\n2. Preparation Details:\n   - Cooking methods evident\n   - Level of complexity\n   - Notable techniques used\n\n3. Cultural/Regional Elements:\n   - Style of presentation\n   - Traditional indicators\n   - Regional characteristics\n\nNow, with this detailed understanding of the dish, let me address the question: {} \n\nThe options are: {}".format(q, choices_str),
+                "Based on my analysis of the dish and the question at hand, I select ("
+            ]
+        if template == 10:  # Knowledge-based CoT template
+            return [
+                "You are analyzing a question about {}: {} Options: {}\n\nLet me think through this step by step:\n\n1. What is this dish?\n2. Where did it originate?\n3. What are its defining characteristics?\n4. How is it traditionally prepared?\n\nAnalyzing each option...".format(
+                    "cuisine type" if "cuisine" in q.lower() else 
+                    "regional origin" if "region" in q.lower() else 
+                    "cooking methods" if "cook" in q.lower() else "food culture",
+                    q, choices_str),
+                "\nBased on this analysis, I select ("
+            ]
+        if template == 11:  # Visual Analysis Template
+            return [
+                """You are an AI assistant examining this dish visually. Question: {} 
+            Options: {}
 
+            Let me examine the image carefully for visual clues:
+
+            1. Surface & Texture:
+            - What's the outer appearance? (shiny/dry/crispy/soft)
+            - Can I see any distinct textures? (rough/smooth/flaky)
+            - Are there any visible layers or cross-sections?
+
+            2. Colors & Ingredients:
+            - What are the dominant colors?
+            - Can I spot specific ingredients? (peppers/herbs/sauces)
+            - Are there any characteristic garnishes?
+
+            3. Presentation & State:
+            - How is the dish arranged? (whole/pieces/mixed)
+            - What cooking effects are visible? (charring/browning/steaming)
+            - Are there any signature presentation elements?
+
+            Looking at these visual elements and comparing to the options...""".format(q, choices_str),
+                            "\nBased on these visible characteristics, I select ("
+            ]
+        if template == 12:
+            return "You are a helpful chef AI assistant. Please answer the following multiple choice question based on the image: {} Here are the options: {} Please look carefully at the dish and all of the ingredients and composition, and think carefully before you select one of the options as your answer (".format(q, choices_str)
+        if template == 13:
+            return "You are a helpful chef AI assistant. Please answer the following multiple choice question based on the image: {} Here are the options: {} Please look carefully at the dish and list out all of the ingredients, and think carefully step-by-step against all posible options before you select one of the options as your answer (".format(q, choices_str)
+        if template == 14:
+            return [
+                """You are a helpful chef AI assistant. Please analyze the following question about the food image:
+                Question: {}
+                Options: {}
+                
+                Please follow these steps:
+                1. List all visible ingredients and components in the dish
+                2. Think carefully about each option step-by-step
+                3. Explain your reasoning
+                4. End your response with 'Final Answer: [X]' where X is your chosen option (A, B, C, or D)""".format(q, choices_str),
+                "Let me analyze the image and provide my answer..."
+            ]
 
 def get_prompt_qwen(question, data_dir, show_food_name=False, use_web_img=False, template=0, lang="zh"):
     # for qwen model
