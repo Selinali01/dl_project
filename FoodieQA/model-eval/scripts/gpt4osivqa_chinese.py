@@ -16,14 +16,15 @@ class GPT4oEvaluator:
 
     def evaluate_question(self, question, data_dir, template=0, show_food_name=False):
         # Get formatted question, image path, and choices using sivqa_utils
+        # Changed lang parameter to "zh" for Chinese
         q, img_path, choices_str = sivqa_utils.format_question(
             question, 
-            lang="en",
+            lang="zh",  # Changed to Chinese
             show_food_name=show_food_name
         )
         
-        # Use their template formatting
-        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="en")
+        # Use Chinese template formatting
+        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="zh")
         
         # If prompt is a list (for templates 2-4), join with appropriate formatting
         if isinstance(prompt, list):
@@ -31,13 +32,13 @@ class GPT4oEvaluator:
             user_expectation = prompt[1]
         else:
             system_prompt = prompt
-            user_expectation = "Please provide only the letter choice as your answer."
+            user_expectation = "请只提供字母选项作为答案。"  # Chinese instruction
 
         # Construct messages for API call
         messages = [
             {
                 "role": "system",
-                "content": "You are a helpful assistant that answers questions about food images."
+                "content": "你是一个帮助回答食物图片相关问题的智能助手。"  # Chinese system message
             },
             {
                 "role": "user",
@@ -80,12 +81,11 @@ class GPT4oEvaluator:
             }
 
         except Exception as e:
-            print(f"Error processing question: {e}")
-            # Also fix the ground truth calculation in the error case
+            print(f"处理问题时出错：{e}")  # Chinese error message
             answer_idx = int(question['answer'])
             return {
                 "question_id": question["question_id"],
-                "response": "ERROR",
+                "response": "错误",  # Chinese error message
                 "ground_truth": chr(ord('A') + answer_idx),
                 "correct": 0
             }
@@ -106,25 +106,25 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", 
                        default="/Users/selinali/dl_project/FoodieQA/data_folder",
-                       help="Directory containing the dataset")
+                       help="包含数据集的目录")  # Chinese help text
     parser.add_argument("--output_dir", 
                        default="/Users/selinali/dl_project/FoodieQA/output",
-                       help="Output directory for results")
+                       help="结果输出目录")  # Chinese help text
     parser.add_argument("--eval_file", 
-                       default="sivqa_test.json",
-                       help="Evaluation file name")
+                       default="sivqa_tidy.json",
+                       help="评估文件名称")  # Chinese help text
     parser.add_argument("--template", 
                        type=int, 
                        default=0,
-                       help="Prompt template number (0-4)")
+                       help="提示模板编号 (0-4)")  # Chinese help text
     parser.add_argument("--show_food_name", 
                        action="store_true", 
                        default=False,
-                       help="Whether to show food name in prompt")
+                       help="是否在提示中显示食物名称")  # Chinese help text
     parser.add_argument("--api_key", 
                        type=str, 
                        default="",
-                       help="OpenAI API key (optional if using env var)")
+                       help="OpenAI API密钥 (如果使用环境变量则可选)")  # Chinese help text
     args = parser.parse_args()
 
     # Create output directory if it doesn't exist
@@ -135,7 +135,6 @@ def main():
 
     # Load questions using the specified eval file
     questions = sivqa_utils.read_sivqa(args.data_dir, args.eval_file)
-
 
     # Evaluate all questions
     results = []
@@ -149,14 +148,14 @@ def main():
         results.append(result)
 
         # Save results after each question (in case of interruption)
-        output_file = os.path.join(args.output_dir, f'results_template{args.template}.jsonl')
+        output_file = os.path.join(args.output_dir, f'resultszh_template{args.template}.jsonl')
         with open(output_file, 'w') as f:
             for r in results:
                 f.write(json.dumps(r) + '\n')
 
     # Calculate and save final accuracy
     accuracy = evaluator.total_correct / evaluator.total_questions
-    print(f"Final accuracy: {accuracy:.2%}")
+    print(f"最终准确率：{accuracy:.2%}")  # Chinese output
 
     # Save summary
     summary = {
@@ -167,7 +166,7 @@ def main():
         "show_food_name": args.show_food_name
     }
     
-    with open(os.path.join(args.output_dir, f'summary_template{args.template}.json'), 'w') as f:
+    with open(os.path.join(args.output_dir, f'summaryzh_template{args.template}.json'), 'w') as f:
         json.dump(summary, f, indent=2)
 
 if __name__ == "__main__":

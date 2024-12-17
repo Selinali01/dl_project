@@ -12,7 +12,11 @@ def analyze_performance_by_question_type():
     type_stats = defaultdict(lambda: {'correct': 0, 'total': 0})
     
     # Process results file
+<<<<<<< HEAD
     with open('baidu_results_template6_zh.jsonl', 'r', encoding='utf-8') as f:
+=======
+    with open('resultszh_template1.jsonl', 'r', encoding='utf-8') as f:
+>>>>>>> CoT
         for line in f:
             result = json.loads(line)
             question_id = result['question_id']
@@ -71,7 +75,11 @@ def analyze_performance_by_question_type():
     }
 
     # Save results
+<<<<<<< HEAD
     with open('baidu_performance_analysis_6_zh.json', 'w', encoding='utf-8') as f:
+=======
+    with open('performance_analysis_zh.json', 'w', encoding='utf-8') as f:
+>>>>>>> CoT
         json.dump(performance_analysis, f, indent=2, ensure_ascii=False)
 
     # Print summary
