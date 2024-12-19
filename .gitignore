@@ -8,8 +8,14 @@ FoodieQA/model-eval/scripts/__pycache__
 FoodieQA/rag/wikipedia/recipe_db/
 **/recipe_db/
 
-FoodieQA/rag/xiachufang/last_recipe_page.html
-FoodieQA/rag/xiachufang/last_search_page.html
+CoT/cachehr/
+CoT/data_folder/
+CoT/model-eval/scripts/__pycache__
+
+**/__pycache__/
+CoT/rag/wikipedia/recipe_db/
+**/recipe_db/
+
 
 
 .env
