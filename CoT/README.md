@@ -49,6 +49,8 @@ The CoT prompting strategy breaks down visual analysis into systematic steps:
     pip install -r requirements.txt
     ```
 
+- Download datset from Huggingface and add to data_folder/images: lyan62/FoodieQA
+
 - Add gpt4o key in .env
     ```
     OPENAI_API_KEY =''
