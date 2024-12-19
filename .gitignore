@@ -11,8 +11,6 @@ FoodieQA/rag/wikipedia/recipe_db/
 CoT/cachehr/
 CoT/data_folder/
 CoT/model-eval/scripts/__pycache__
-
-**/__pycache__/
 CoT/rag/wikipedia/recipe_db/
 **/recipe_db/
 
