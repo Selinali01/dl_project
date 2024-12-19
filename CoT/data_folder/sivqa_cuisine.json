@@ -1,0 +1,2109 @@
+[
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "京菜",
+            "徽菜",
+            "新疆菜",
+            "桂菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "烤羊肉串",
+        "question_id": "vqa-0",
+        "food_meta": {
+            "main_ingredient": [
+                "肉",
+                "羊"
+            ],
+            "id": 217,
+            "food_name": "烤羊肉串",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_217_IMG_3854.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Beijing cuisine",
+            "Anhui cuisine",
+            "Xinjiang cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "徽菜",
+            "赣菜 (客家菜）",
+            "川菜",
+            "新疆菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "辣子鸡丁",
+        "question_id": "vqa-1",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡"
+            ],
+            "id": 82,
+            "food_name": "辣子鸡丁",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_82_IMG_9847.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Anhui cuisine",
+            "Gan Cuisine (Hakka)",
+            "Sichuan cuisine",
+            "Xinjiang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "赣菜",
+            "京菜",
+            "浙菜",
+            "苏菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "盐水鸭",
+        "question_id": "vqa-10",
+        "food_meta": {
+            "main_ingredient": [
+                "鸭"
+            ],
+            "id": 64,
+            "food_name": "盐水鸭",
+            "food_type": "苏菜（江苏）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_64_IMG_20240409_181047.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Gan cuisine, Jiangxi cuisine",
+            "Beijing cuisine",
+            "Zhejiang cuisine",
+            "Jiangsu cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "苏菜",
+            "浙菜",
+            "沪菜",
+            "徽菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "臭鳜鱼",
+        "question_id": "vqa-16",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 122,
+            "food_name": "臭鳜鱼",
+            "food_type": "徽菜 （安徽）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_122_IMG_20240330_124857.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Jiangsu cuisine",
+            "Zhejiang cuisine",
+            "Shanghai cuisine",
+            "Anhui cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "西北菜",
+            "湘菜",
+            "家常菜",
+            "潮汕菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "猪血丸子",
+        "question_id": "vqa-21",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 12,
+            "food_name": "猪血丸子",
+            "food_type": "湘菜（湖南）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_12_fb48488412a1846c104b28600f4f1ded.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Northwestern cuisine",
+            "Hunan cuisine",
+            "Homestyle dish",
+            "Chaoshanese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "湘菜",
+            "内蒙古菜",
+            "徽菜",
+            "沪菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "剁椒鱼头",
+        "question_id": "vqa-23",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 147,
+            "food_name": "剁椒鱼头",
+            "food_type": "湘菜（湖南）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_147_IMG_20190225_184723.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Hunan cuisine",
+            "Inner Mongolia cuisine",
+            "Anhui cuisine",
+            "Shanghai cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "鲁菜",
+            "赣菜 (客家菜）",
+            "粤菜",
+            "川菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "青椒肉丝",
+        "question_id": "vqa-24",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 150,
+            "food_name": "青椒肉丝",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_150_IMG_20181218_190852.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Shandong cuisine",
+            "Gan Cuisine (Hakka)",
+            "Cantonese cuisine",
+            "Sichuan cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "闽菜",
+            "潮汕菜",
+            "赣菜 (客家菜）",
+            "粤菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "黑椒牛仔骨",
+        "question_id": "vqa-26",
+        "food_meta": {
+            "main_ingredient": [
+                "牛"
+            ],
+            "id": 257,
+            "food_name": "黑椒牛仔骨",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_257_79874AA6-4F23-4AD6-96E2-7F64039A81C0.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Fujian cuisine",
+            "Chaoshanese cuisine",
+            "Gan Cuisine (Hakka)",
+            "Cantonese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "苏菜",
+            "京菜",
+            "鲁菜",
+            "赣菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "松鼠鱼",
+        "question_id": "vqa-33",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 65,
+            "food_name": "松鼠鱼",
+            "food_type": "苏菜（江苏）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_65_IMG_20240424_121225.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Jiangsu cuisine",
+            "Beijing cuisine",
+            "Shandong cuisine",
+            "Gan cuisine, Jiangxi cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "粤菜",
+            "苏菜",
+            "湘菜",
+            "浙菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "虾饺",
+        "question_id": "vqa-42",
+        "food_meta": {
+            "main_ingredient": [
+                "虾"
+            ],
+            "id": 144,
+            "food_name": "虾饺",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_144_IMG_8800.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Cantonese cuisine",
+            "Jiangsu cuisine",
+            "Hunan cuisine",
+            "Zhejiang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "川菜",
+            "新疆菜",
+            "粤菜",
+            "华北菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "水煮肉片",
+        "question_id": "vqa-44",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 113,
+            "food_name": "水煮肉片",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_113_IMG_1724.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Xinjiang cuisine",
+            "Cantonese cuisine",
+            "Northern Chinese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "桂菜",
+            "滇菜",
+            "西北菜",
+            "鲁菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "拉皮",
+        "question_id": "vqa-51",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 14,
+            "food_name": "拉皮",
+            "food_type": "东北菜 （黑龙江等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_14_IMG_20220721_150241.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "Yunnan cuisine",
+            "northwestern cuisine",
+            "Shandong cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "苏菜",
+            "粤菜",
+            "沪菜",
+            "东北菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "青团",
+        "question_id": "vqa-55",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 236,
+            "food_name": "青团",
+            "food_type": "苏菜（江苏）",
+            "food_location": "外卖",
+            "food_file": "images/14456664_236_IMG_4742.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Jiangsu cuisine",
+            "Cantonese cuisine",
+            "Shanghai cuisine",
+            "Northeastern of China cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "粤菜",
+            "苏菜",
+            "鲁菜",
+            "浙菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "荷叶粉蒸肉",
+        "question_id": "vqa-61",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 93,
+            "food_name": "荷叶粉蒸肉",
+            "food_type": "黔菜 (贵州）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_93_Image_1713865938858.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Cantonese cuisine",
+            "Jiangsu cuisine",
+            "Shandong cuisine",
+            "Zhejiang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "桂菜",
+            "浙菜",
+            "粤菜",
+            "苏菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "太湖银鱼",
+        "question_id": "vqa-66",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼",
+                "蛋"
+            ],
+            "id": 55,
+            "food_name": "太湖银鱼",
+            "food_type": "苏菜（江苏）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_55_IMG_8533.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "Zhejiang cuisine",
+            "Cantonese cuisine",
+            "Jiangsu cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "新疆菜",
+            "鲁菜",
+            "赣菜 (客家菜）",
+            "家常菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "过油肉拌面",
+        "question_id": "vqa-78",
+        "food_meta": {
+            "main_ingredient": [
+                "肉",
+                "面"
+            ],
+            "id": 134,
+            "food_name": "过油肉拌面",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_134_IMG_20220709_153652.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Xinjiang cuisine",
+            "Shandong cuisine",
+            "Gan Cuisine (Hakka)",
+            "home cooking"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "川菜",
+            "新疆",
+            "潮汕菜",
+            "苏菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "冒菜",
+        "question_id": "vqa-80",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 88,
+            "food_name": "冒菜",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_88_wx_camera_1712730236546.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Xinjiang",
+            "Chaoshanese cuisine",
+            "Jiangsu cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "内蒙古菜",
+            "沪菜",
+            "华北菜",
+            "西北菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "菠菜面",
+        "question_id": "vqa-81",
+        "food_meta": {
+            "main_ingredient": [
+                "面"
+            ],
+            "id": 14,
+            "food_name": "菠菜面",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_14_IMG_3852.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Inner Mongolia cuisine",
+            "Shanghai cuisine",
+            "Northern Chinese cuisine",
+            "northwestern cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "东北菜",
+            "赣菜 (客家菜）",
+            "赣菜",
+            "川菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "口水鸡",
+        "question_id": "vqa-85",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡"
+            ],
+            "id": 44,
+            "food_name": "口水鸡",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_44_930F3702-FC28-498F-A5A7-9E01AA5AEA15.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Northeastern of China cuisine",
+            "Gan Cuisine (Hakka)",
+            "Gan cuisine, Jiangxi cuisine",
+            "Sichuan cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "华北菜",
+            "新疆",
+            "粤",
+            "浙菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "黄鱼烧年糕",
+        "question_id": "vqa-92",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 19,
+            "food_name": "黄鱼烧年糕",
+            "food_type": "浙菜（浙江）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_19_IMG_0395.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Northern Chinese cuisine",
+            "Xinjiang",
+            "Cantonese",
+            "Zhejiang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "川菜",
+            "东北菜",
+            "湘菜",
+            "京菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "毛血旺",
+        "question_id": "vqa-93",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 238,
+            "food_name": "毛血旺",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_238_d370e16ff482d13a0718c6fb4cd7ffbb.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Northeastern of China cuisine",
+            "Hunan cuisine",
+            "Beijing cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "淮扬菜",
+            "川菜",
+            "赣菜 (客家菜）",
+            "内蒙古菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "宫保鸡丁",
+        "question_id": "vqa-96",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡"
+            ],
+            "id": 193,
+            "food_name": "宫保鸡丁",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_193_IMG_2435.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Huaiyang cuisine",
+            "Sichuan cuisine",
+            "Gan Cuisine (Hakka)",
+            "Inner Mongolia cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "粤",
+            "西北菜",
+            "川菜",
+            "徽菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "米皮",
+        "question_id": "vqa-101",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 50,
+            "food_name": "米皮",
+            "food_type": "西北菜 （陕西，甘肃等地）",
+            "food_location": "家里自制",
+            "food_file": "images/14456664_50_mmexport1712821641752.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Cantonese",
+            "northwestern cuisine",
+            "Sichuan cuisine",
+            "Anhui cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "粤菜",
+            "苏菜",
+            "新疆菜",
+            "赣菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "鱼丸粉",
+        "question_id": "vqa-104",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 70,
+            "food_name": "鱼丸粉",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_70_IMG_0581.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Cantonese cuisine",
+            "Jiangsu cuisine",
+            "Xinjiang cuisine",
+            "Gan cuisine, Jiangxi cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "闽菜",
+            "新疆",
+            "桂菜",
+            "内蒙古菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "拉条子",
+        "question_id": "vqa-107",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 80,
+            "food_name": "拉条子",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_80_IMG_6323.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Fujian cuisine",
+            "Xinjiang",
+            "Guizhou cuisine",
+            "Inner Mongolia cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "黔菜",
+            "鲁菜",
+            "川菜",
+            "新疆"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "辣子鸡",
+        "question_id": "vqa-111",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡"
+            ],
+            "id": 187,
+            "food_name": "辣子鸡",
+            "food_type": "黔菜 (贵州）",
+            "food_location": "家里自制",
+            "food_file": "images/14456664_187_mmexport1713446177339.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "Shandong cuisine",
+            "Sichuan cuisine",
+            "Xinjiang"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "湘菜",
+            "滇菜",
+            "黔菜",
+            "内蒙古菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "辣椒炒肉",
+        "question_id": "vqa-114",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 209,
+            "food_name": "辣椒炒肉",
+            "food_type": "湘菜（湖南）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_209_IMG_3105.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Hunan cuisine",
+            "Yunnan cuisine",
+            "Guizhou cuisine",
+            "Inner Mongolia cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "新疆",
+            "苏菜",
+            "沪菜",
+            "内蒙古菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "酒酿圆子",
+        "question_id": "vqa-120",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 225,
+            "food_name": "酒酿圆子",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_225_a24347c896c046abc8892a2b3d8705ad.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Xinjiang",
+            "Jiangsu cuisine",
+            "Shanghai cuisine",
+            "Inner Mongolia cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "闽菜",
+            "浙菜",
+            "沪菜",
+            "黔菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "西湖醋鱼",
+        "question_id": "vqa-122",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 158,
+            "food_name": "西湖醋鱼",
+            "food_type": "浙菜（浙江）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_158_IMG_20240416_141427.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Fujian cuisine",
+            "Zhejiang cuisine",
+            "Shanghai cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "淮扬菜",
+            "闽菜",
+            "桂菜",
+            "粤"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "荔枝肉",
+        "question_id": "vqa-125",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 129,
+            "food_name": "荔枝肉",
+            "food_type": "闽菜（福建）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_129_IMG_20220605_181308.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Huaiyang cuisine",
+            "Fujian cuisine",
+            "Guizhou cuisine",
+            "Cantonese"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "家常菜",
+            "赣菜",
+            "淮扬菜",
+            "新疆菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "大盘鸡",
+        "question_id": "vqa-126",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡"
+            ],
+            "id": 141,
+            "food_name": "大盘鸡",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_141_IMG_1724.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "home cooking",
+            "Gan cuisine, Jiangxi cuisine",
+            "Huaiyang cuisine",
+            "Xinjiang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "家常菜",
+            "苏菜",
+            "淮扬菜",
+            "粤"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "响油鳝糊",
+        "question_id": "vqa-129",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 248,
+            "food_name": "响油鳝糊",
+            "food_type": "苏菜（江苏）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_248_D8768DE2-559E-4850-A95E-07D5539F06C1.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "home cooking",
+            "Jiangsu cuisine",
+            "Huaiyang cuisine",
+            "Cantonese"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "川菜",
+            "西北菜",
+            "淮扬菜",
+            "粤"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "酿皮",
+        "question_id": "vqa-139",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 261,
+            "food_name": "酿皮",
+            "food_type": "西北菜 （陕西，甘肃等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_261_0E3192C7-1B0D-4C4D-9788-5E7A5E6E92BA.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "northwestern cuisine",
+            "Huaiyang cuisine",
+            "Cantonese"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "闽菜",
+            "华北菜",
+            "内蒙古菜",
+            "黔菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "姜母鸭",
+        "question_id": "vqa-140",
+        "food_meta": {
+            "main_ingredient": [
+                "鸭"
+            ],
+            "id": 108,
+            "food_name": "姜母鸭",
+            "food_type": "闽菜（福建）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_108_IMG_6205.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Fujian cuisine",
+            "Northern Chinese cuisine",
+            "Inner Mongolia cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "川菜",
+            "新疆菜",
+            "桂菜",
+            "潮汕菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "重庆火锅",
+        "question_id": "vqa-141",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 10,
+            "food_name": "重庆火锅",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_10_IMG_5798.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Xinjiang cuisine",
+            "Guizhou cuisine",
+            "Chaoshanese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "新疆",
+            "淮扬菜",
+            "黔菜",
+            "内蒙古菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "馕",
+        "question_id": "vqa-145",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 136,
+            "food_name": "馕",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_136_IMG_20220709_233905.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Xinjiang",
+            "Huaiyang cuisine",
+            "Guizhou cuisine",
+            "Inner Mongolia cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "赣菜",
+            "苏菜",
+            "川菜",
+            "京菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "扬州炒饭",
+        "question_id": "vqa-153",
+        "food_meta": {
+            "main_ingredient": [
+                "饭"
+            ],
+            "id": 122,
+            "food_name": "扬州炒饭",
+            "food_type": "浙菜（浙江）",
+            "food_location": "学校或单位食堂",
+            "food_file": "images/14521898_122_53D0E884-E012-4FFA-8BD7-8F5666A53123.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Gan cuisine, Jiangxi cuisine",
+            "Jiangsu cuisine",
+            "Sichuan cuisine",
+            "Beijing cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "新疆",
+            "川菜",
+            "苏菜",
+            "闽菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "桂花糖藕",
+        "question_id": "vqa-160",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 228,
+            "food_name": "桂花糖藕",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_228_CADAA5EF-1C9D-4243-A287-D18850C8B43C.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Xinjiang",
+            "Sichuan cuisine",
+            "Jiangsu cuisine",
+            "Fujian cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "湘菜",
+            "川菜",
+            "闽菜",
+            "黔菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "水城烙锅",
+        "question_id": "vqa-162",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 97,
+            "food_name": "水城烙锅",
+            "food_type": "黔菜 (贵州）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_97_Image_1713865926721.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Hunan cuisine",
+            "Sichuan cuisine",
+            "Fujian cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "黔菜",
+            "淮扬菜",
+            "赣菜",
+            "东北菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "锅包肉",
+        "question_id": "vqa-175",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 237,
+            "food_name": "锅包肉",
+            "food_type": "东北菜 （黑龙江等地）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_237_IMG_5909.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "Huaiyang cuisine",
+            "Gan cuisine, Jiangxi cuisine",
+            "Northeastern of China cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "西北菜",
+            "滇菜",
+            "苏菜",
+            "鲁菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "糖醋丸子",
+        "question_id": "vqa-179",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 22,
+            "food_name": "糖醋丸子",
+            "food_type": "西北菜 （陕西，甘肃等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_22_IMG_20240404_135935.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "northwestern cuisine",
+            "Yunnan cuisine",
+            "Jiangsu cuisine",
+            "Shandong cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "内蒙古菜",
+            "赣菜 (客家菜）",
+            "淮扬菜",
+            "粤菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "叉烧包",
+        "question_id": "vqa-183",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 249,
+            "food_name": "叉烧包",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_249_0755477B-B9D5-4786-8D86-BFD4AC9478FD.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Inner Mongolia cuisine",
+            "Gan Cuisine (Hakka)",
+            "Huaiyang cuisine",
+            "Cantonese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "华北菜",
+            "川菜",
+            "黔菜",
+            "粤"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "酸菜鱼",
+        "question_id": "vqa-190",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 13,
+            "food_name": "酸菜鱼",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "家里自制",
+            "food_file": "images/14456664_13_IMG_20230522_201922.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Northern Chinese cuisine",
+            "Sichuan cuisine",
+            "Guizhou cuisine",
+            "Cantonese"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "赣菜 (客家菜）",
+            "内蒙古菜",
+            "粤菜",
+            "赣菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "咖喱牛腩牛筋面",
+        "question_id": "vqa-193",
+        "food_meta": {
+            "main_ingredient": [
+                "面",
+                "牛"
+            ],
+            "id": 87,
+            "food_name": "咖喱牛腩牛筋面",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_87_IMG_5316.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Gan Cuisine (Hakka)",
+            "Inner Mongolia cuisine",
+            "Cantonese cuisine",
+            "Gan cuisine, Jiangxi cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "苏菜",
+            "赣菜",
+            "京菜",
+            "西北菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "啤酒鸭",
+        "question_id": "vqa-202",
+        "food_meta": {
+            "main_ingredient": [
+                "鸭"
+            ],
+            "id": 80,
+            "food_name": "啤酒鸭",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_80_IMG_2613.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Jiangsu cuisine",
+            "Gan cuisine, Jiangxi cuisine",
+            "Beijing cuisine",
+            "northwestern cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "赣菜 (客家菜）",
+            "新疆",
+            "粤菜",
+            "东北菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "白切鸡",
+        "question_id": "vqa-205",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡"
+            ],
+            "id": 157,
+            "food_name": "白切鸡",
+            "food_type": "上海本帮菜",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_157_IMG_8868.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Gan Cuisine (Hakka)",
+            "Xinjiang",
+            "Cantonese cuisine",
+            "Northeastern of China cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "闽菜",
+            "粤菜",
+            "桂菜",
+            "滇菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "同安封肉",
+        "question_id": "vqa-208",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 168,
+            "food_name": "同安封肉",
+            "food_type": "闽菜（福建）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_168_D4D36C59-2D68-4354-B05C-B3065F6581AA.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Fujian cuisine",
+            "Cantonese cuisine",
+            "Guizhou cuisine",
+            "Yunnan cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "粤菜",
+            "华北菜",
+            "新疆菜",
+            "苏菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "清蒸鲈鱼",
+        "question_id": "vqa-215",
+        "food_meta": {
+            "main_ingredient": [
+                "鱼"
+            ],
+            "id": 83,
+            "food_name": "清蒸鲈鱼",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "家里自制",
+            "food_file": "images/14521898_83_IMG_20240409_184118.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Cantonese cuisine",
+            "Northern Chinese cuisine",
+            "Xinjiang cuisine",
+            "Jiangsu cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "赣菜",
+            "浙菜",
+            "湘菜",
+            "苏菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "毛式红烧肉",
+        "question_id": "vqa-216",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 149,
+            "food_name": "毛式红烧肉",
+            "food_type": "苏菜（江苏）",
+            "food_location": "家里自制",
+            "food_file": "images/14456664_149_IMG_20180812_182400.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Gan cuisine, Jiangxi cuisine",
+            "Zhejiang cuisine",
+            "Hunan cuisine",
+            "Jiangsu cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "赣菜 (客家菜）",
+            "赣菜",
+            "粤菜",
+            "新疆"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "客家酿豆腐",
+        "question_id": "vqa-218",
+        "food_meta": {
+            "main_ingredient": [
+                "豆腐"
+            ],
+            "id": 226,
+            "food_name": "客家酿豆腐",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_226_e3af10a75d446583ab939aed2e0578b7.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Gan Cuisine (Hakka)",
+            "Gan cuisine, Jiangxi cuisine",
+            "Cantonese cuisine",
+            "Xinjiang"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "川菜",
+            "粤",
+            "东北菜",
+            "苏菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "回锅肉",
+        "question_id": "vqa-224",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 36,
+            "food_name": "回锅肉",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "家里自制",
+            "food_file": "images/14456664_36_20240410160819.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Cantonese",
+            "Northeastern of China cuisine",
+            "Jiangsu cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "黔菜",
+            "西北菜",
+            "苏菜",
+            "新疆"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "凯里酸汤鱼",
+        "question_id": "vqa-225",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 61,
+            "food_name": "凯里酸汤鱼",
+            "food_type": "黔菜 (贵州）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_61_mmexport1550554859117.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "northwestern cuisine",
+            "Jiangsu cuisine",
+            "Xinjiang"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "川菜",
+            "湘菜",
+            "粤菜",
+            "赣菜 (客家菜）"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "梅菜扣肉",
+        "question_id": "vqa-227",
+        "food_meta": {
+            "main_ingredient": [
+                "肉"
+            ],
+            "id": 253,
+            "food_name": "梅菜扣肉",
+            "food_type": "客家菜",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_253_11BD834B-DA44-4195-B51B-15AADCD68552.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Hunan cuisine",
+            "Cantonese cuisine",
+            "Gan Cuisine (Hakka)"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "川菜",
+            "桂菜",
+            "新疆",
+            "粤菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "煲仔饭",
+        "question_id": "vqa-229",
+        "food_meta": {
+            "main_ingredient": [
+                "饭"
+            ],
+            "id": 112,
+            "food_name": "煲仔饭",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_112_IMG_3570.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Guizhou cuisine",
+            "Xinjiang",
+            "Cantonese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "潮汕菜",
+            "华北菜",
+            "苏菜",
+            "桂菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "蟹黄汤包",
+        "question_id": "vqa-230",
+        "food_meta": {
+            "main_ingredient": [
+                "蟹"
+            ],
+            "id": 34,
+            "food_name": "蟹黄汤包",
+            "food_type": "苏菜（江苏）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_34_IMG_0400.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Chaoshanese cuisine",
+            "Northern Chinese cuisine",
+            "Jiangsu cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "淮扬菜",
+            "闽菜",
+            "川菜",
+            "赣菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "红烧牛肉",
+        "question_id": "vqa-231",
+        "food_meta": {
+            "main_ingredient": [
+                "肉",
+                "牛"
+            ],
+            "id": 88,
+            "food_name": "红烧牛肉",
+            "food_type": "云南菜",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_88_IMG_20240328_092237.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Huaiyang cuisine",
+            "Fujian cuisine",
+            "Sichuan cuisine",
+            "Gan cuisine, Jiangxi cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "内蒙古菜",
+            "淮扬菜",
+            "浙菜",
+            "东北菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "酱牛肉",
+        "question_id": "vqa-233",
+        "food_meta": {
+            "main_ingredient": [
+                "肉",
+                "牛"
+            ],
+            "id": 262,
+            "food_name": "酱牛肉",
+            "food_type": "西北菜 （陕西，甘肃等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_262_75B3AEDF-C705-400B-AE86-3FA7A92B624C.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Inner Mongolia cuisine",
+            "Huaiyang cuisine",
+            "Zhejiang cuisine",
+            "Northeastern of China cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "浙菜",
+            "黔菜",
+            "京菜",
+            "华北菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "龙井虾仁",
+        "question_id": "vqa-237",
+        "food_meta": {
+            "main_ingredient": [
+                "虾"
+            ],
+            "id": 117,
+            "food_name": "龙井虾仁",
+            "food_type": "浙菜（浙江）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_117_IMG_8176.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Zhejiang cuisine",
+            "Guizhou cuisine",
+            "Beijing cuisine",
+            "Northern Chinese cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "内蒙古菜",
+            "苏菜",
+            "川菜",
+            "桂菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "鸭血粉丝汤",
+        "question_id": "vqa-248",
+        "food_meta": {
+            "main_ingredient": [
+                "鸭"
+            ],
+            "id": 194,
+            "food_name": "鸭血粉丝汤",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_194_IMG_20240503_193507.jpg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Inner Mongolia cuisine",
+            "Jiangsu cuisine",
+            "Sichuan cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "湘菜",
+            "苏菜",
+            "鲁菜",
+            "京菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "无锡小笼包",
+        "question_id": "vqa-250",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 109,
+            "food_name": "无锡小笼包",
+            "food_type": "苏菜（江苏）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_109_IMG_5997.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Hunan cuisine",
+            "Jiangsu cuisine",
+            "Shandong cuisine",
+            "Beijing cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "新疆",
+            "东北菜",
+            "粤",
+            "湘菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "大碴子粥",
+        "question_id": "vqa-255",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 26,
+            "food_name": "大碴子粥",
+            "food_type": "东北菜 （黑龙江等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_26_IMG_3472.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Xinjiang",
+            "Northeastern of China cuisine",
+            "Cantonese",
+            "Hunan cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "赣菜",
+            "粤菜",
+            "鲁菜",
+            "淮扬菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "红米肠粉",
+        "question_id": "vqa-256",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 162,
+            "food_name": "红米肠粉",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "学校或单位食堂",
+            "food_file": "images/14521898_162_IMG_0356.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Gan cuisine, Jiangxi cuisine",
+            "Cantonese cuisine",
+            "Shandong cuisine",
+            "Huaiyang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "黔菜",
+            "浙菜",
+            "华北菜",
+            "西北菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "油爆虾",
+        "question_id": "vqa-261",
+        "food_meta": {
+            "main_ingredient": [
+                "虾"
+            ],
+            "id": 130,
+            "food_name": "油爆虾",
+            "food_type": "浙菜（浙江）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_130_IMG_20220605_180820.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "Zhejiang cuisine",
+            "Northern Chinese cuisine",
+            "northwestern cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "东北菜",
+            "家常菜",
+            "苏菜",
+            "新疆菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "羊肉抓饭",
+        "question_id": "vqa-262",
+        "food_meta": {
+            "main_ingredient": [
+                "肉",
+                "饭",
+                "羊"
+            ],
+            "id": 139,
+            "food_name": "羊肉抓饭",
+            "food_type": "新疆菜",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_139_IMG_0917-EDIT.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Northeastern of China cuisine",
+            "home cooking",
+            "Jiangsu cuisine",
+            "Xinjiang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "黔菜",
+            "东北菜",
+            "内蒙古菜",
+            "闽菜"
+        ],
+        "answer": "0",
+        "question_type": "cuisine_type",
+        "food_name": "豆腐圆子",
+        "question_id": "vqa-276",
+        "food_meta": {
+            "main_ingredient": [
+                "豆腐"
+            ],
+            "id": 201,
+            "food_name": "豆腐圆子",
+            "food_type": "黔菜 (贵州）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_201_mmexport1713452408322.jpg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Guizhou cuisine",
+            "Northeastern of China cuisine",
+            "Inner Mongolia cuisine",
+            "Fujian cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "鲁菜",
+            "新疆菜",
+            "粤菜",
+            "淮扬菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "干炒牛河",
+        "question_id": "vqa-279",
+        "food_meta": {
+            "main_ingredient": [
+                "牛"
+            ],
+            "id": 242,
+            "food_name": "干炒牛河",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_242_IMG_9080.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Shandong cuisine",
+            "Xinjiang cuisine",
+            "Cantonese cuisine",
+            "Huaiyang cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物是哪个菜系的经典菜?",
+        "choices": [
+            "川菜",
+            "东北菜",
+            "沪菜",
+            "黔菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "丝娃娃",
+        "question_id": "vqa-305",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 41,
+            "food_name": "丝娃娃",
+            "food_type": "黔菜 (贵州）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_41_IMG_20190216_124017.jpeg"
+        },
+        "question_en": "The food in the picture is a classic dish from which cuisine?",
+        "choices_en": [
+            "Sichuan cuisine",
+            "Northeastern of China cuisine",
+            "Shanghai cuisine",
+            "Guizhou cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "赣菜 (客家菜）",
+            "粤菜",
+            "新疆",
+            "东北菜"
+        ],
+        "answer": "1",
+        "question_type": "cuisine_type",
+        "food_name": "陈皮牛肉丸",
+        "question_id": "vqa-308",
+        "food_meta": {
+            "main_ingredient": [
+                "肉",
+                "牛"
+            ],
+            "id": 104,
+            "food_name": "陈皮牛肉丸",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14521898_104_IMG_5282.jpeg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Gan Cuisine (Hakka)",
+            "Cantonese cuisine",
+            "Xinjiang",
+            "Northeastern of China cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物通常属于哪个菜系?",
+        "choices": [
+            "淮扬菜",
+            "浙菜",
+            "粤菜",
+            "鲁菜"
+        ],
+        "answer": "2",
+        "question_type": "cuisine_type",
+        "food_name": "鸡蛋肠粉",
+        "question_id": "vqa-309",
+        "food_meta": {
+            "main_ingredient": [
+                "鸡",
+                "蛋"
+            ],
+            "id": 153,
+            "food_name": "鸡蛋肠粉",
+            "food_type": "粤菜（广东等地）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_153_IMG_20240411_102841.jpg"
+        },
+        "question_en": "The food in the picture usually belongs to which cuisine?",
+        "choices_en": [
+            "Huaiyang cuisine",
+            "Zhejiang cuisine",
+            "Cantonese cuisine",
+            "Shandong cuisine"
+        ]
+    },
+    {
+        "question": "图片中的食物属于哪个菜系?",
+        "choices": [
+            "沪菜",
+            "苏菜",
+            "桂菜",
+            "川菜"
+        ],
+        "answer": "3",
+        "question_type": "cuisine_type",
+        "food_name": "麻辣烫",
+        "question_id": "vqa-320",
+        "food_meta": {
+            "main_ingredient": [
+                "其他"
+            ],
+            "id": 68,
+            "food_name": "麻辣烫",
+            "food_type": "川菜（四川，重庆）",
+            "food_location": "餐馆",
+            "food_file": "images/14456664_68_IMG_0971.jpeg"
+        },
+        "question_en": "The food in the picture belongs to which cuisine?",
+        "choices_en": [
+            "Shanghai cuisine",
+            "Jiangsu cuisine",
+            "Guizhou cuisine",
+            "Sichuan cuisine"
+        ]
+    }
+]
