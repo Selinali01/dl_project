@@ -12,4 +12,15 @@ FoodieQA/rag/xiachufang/last_recipe_page.html
 FoodieQA/rag/xiachufang/last_search_page.html
 
 
+RAG/cachehr/
+RAG/data_folder/
+RAG/model-eval/scripts/__pycache__
+
+**/__pycache__/
+RAG/rag/wikipedia/recipe_db/
+**/recipe_db/
+
+RAG/rag/xiachufang/last_recipe_page.html
+RAG/rag/xiachufang/last_search_page.html
+
 .env
