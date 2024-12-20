@@ -25,16 +25,27 @@ class GPT4oEvaluator:
         
         return 'X'  # Return X if no valid letter found
 
-    def evaluate_question(self, question, data_dir, template=0, show_food_name=False):
+    def evaluate_question(self, question, dish_info, type_data, data_dir, template=0, show_food_name=False, adapt=False):
         # Get formatted question, image path, and choices using sivqa_utils
-        q, img_path, choices_str, food_name = sivqa_utils.format_question(
+        q, img_path, choices_str = sivqa_utils.format_question(
             question, 
             lang="zh",
             show_food_name=show_food_name
         )
-        
-        # Use their template formatting
-        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="zh", food_name = food_name)        
+        question_id = question["question_id"]
+        predicted_dish, full_responses = sivqa_utils.find_dish_info(dish_info, question_id)
+
+        if adapt:
+            q_type = ""
+            question_types = type_data['question_id_mappings']
+            if question_id in question_types:
+                q_type = question_types[question_id]      
+            if  q_type == "cuisine_type" or q_type == "cooking-skills" or q_type == "region-2":
+                template = 100
+            else:
+                template = 11 
+        prompt = sivqa_utils.format_text_prompt(q, choices_str, template=template, lang="zh", food_name = "", predicted_food_names = predicted_dish, full_response = full_responses)
+    
         # If prompt is a list (for templates 2-4), join with appropriate formatting
         if isinstance(prompt, list):
             system_prompt = prompt[0]
@@ -131,26 +142,30 @@ class GPT4oEvaluator:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--data_dir", 
-                       default="C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\data_folder",
+                       default="data_folder",
                        help="Directory containing the dataset")
     parser.add_argument("--output_dir", 
-                       default="C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\output",
+                       default="output",
                        help="Output directory for results")
     parser.add_argument("--eval_file", 
-                       default="sivqa_test.json",
+                       default="sivqa_tidy.json",
                        help="Evaluation file name")
     parser.add_argument("--template", 
                        type=int, 
-                       default=6,
+                       default=11,
                        help="Prompt template number")
     parser.add_argument("--show_food_name", 
                        action="store_true", 
-                       default=True,
+                       default=False,
                        help="Whether to show food name in prompt")
     parser.add_argument("--api_key", 
                        type=str, 
                        default="",
                        help="OpenAI API key (optional if using env var)")
+    
+    parser.add_argument("--adapt",
+                        default=False,
+                        help="Use CoT and RAG")
     args = parser.parse_args()
 
     # Create output directory if it doesn't exist
@@ -161,24 +176,24 @@ def main():
 
     # Load questions using the specified eval file
     questions = sivqa_utils.read_sivqa(args.data_dir, args.eval_file)
-
+    dish_info = sivqa_utils.read_dish_info(args.output_dir, "dish_identification_results.jsonl")
+    type_data = sivqa_utils.read_sivqa(args.output_dir, "question_type_analysis.json")
     # Evaluate all questions
     results = []
     for question in tqdm(questions):
         result = evaluator.evaluate_question(
             question,
+            dish_info,
+            type_data,
             args.data_dir,
             template=args.template,
-            show_food_name=args.show_food_name
+            show_food_name=args.show_food_name,
+            adapt=args.adapt
         )
         results.append(result)
 
         # Save results after each question (in case of interruption)
-<<<<<<< HEAD
-        output_file = os.path.join(args.output_dir, f'baidu_results_template{args.template}_zh.jsonl')
-=======
-        output_file = os.path.join(args.output_dir, f'results_template{args.template}_verbose.jsonl')
->>>>>>> CoT
+        output_file = os.path.join(args.output_dir, f'results_template{args.template}`_verbose.jsonl')
         with open(output_file, 'w') as f:
             for r in results:
                 f.write(json.dumps(r) + '\n')
@@ -196,11 +211,7 @@ def main():
         "show_food_name": args.show_food_name
     }
     
-<<<<<<< HEAD
-    with open(os.path.join(args.output_dir, f'baidu_summary_template{args.template}_zh.json'), 'w') as f:
-=======
-    with open(os.path.join(args.output_dir, f'summary_template{args.template}_verbose.json'), 'w') as f:
->>>>>>> CoT
+    with open(os.path.join(args.output_dir, f'summary_template{args.template}`_verbose.json'), 'w') as f:
         json.dump(summary, f, indent=2)
 
 if __name__ == "__main__":

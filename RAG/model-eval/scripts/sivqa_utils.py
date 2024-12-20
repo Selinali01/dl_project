@@ -2,8 +2,8 @@
 import json
 import os
 import sys
-sys.path.insert(0,"C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\rag\\wikipedia" )
-sys.path.insert(0,"C:\\Users\\choyd\cs5787\\final\\dl_project\\FoodieQA\\rag\\baidu" )
+sys.path.insert(0,"D:\\cs5787\\final\\dl_project\\FoodieQA\\rag\\wikipedia" )
+sys.path.insert(0,"D:\\cs5787\\final\\dl_project\\FoodieQA\\rag\\baidu" )
 print(sys.path)
 from inspect_db import ChromaInspector
 
@@ -14,6 +14,15 @@ def read_sivqa(data_dir, file_name="sivqa_tidy.json"):
     with open(question_file, 'r', encoding='utf-8') as f:
         sivqa = json.load(f)
     return sivqa
+
+def read_dish_info(data_dir, file_name=""):
+    dish_file = os.path.join(data_dir, file_name)
+    data = []
+    with open(dish_file, "r", encoding="utf-8") as f:
+        for line in f:
+            data.append(json.loads(line.strip()))
+    return data
+        
 
 def format_choices(choices, template=0):
     idx2choice = {0:"A", 1:"B", 2:"C", 3:"D"}
@@ -42,11 +51,10 @@ def format_question(question, lang="zh", show_food_name=False, use_web_img=False
         img = question["food_meta"]["food_file"]
     
     choices_str = format_choices(choices)
-    food_name = question["food_name"]
     
-    return q, img, choices_str, food_name
+    return q, img, choices_str
 
-def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
+def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = "", predicted_food_names = [], full_response= ""):
     if lang == "zh":
         if template == 0:
             return "{} 选项有: {}, 请根据上图从所提供的选项中选择一个正确答案，为（".format(q, choices_str)
@@ -67,12 +75,6 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
                 if not entries:
                     return ""
                 entry = entries[0]
-                # aspects = ['cuisine_type', 'flavor', 'region', 'main_ingredient', 'cooking_skills']
-                # context = []
-                # for aspect in aspects:
-                #     info = inspector.extract_info(entry['content'], aspect)
-                #     if info:
-                #         context.append(f"{aspect}: {'; '.join(info)}")
                 context = entry["content"]
                 return "\n".join(context)
                 
@@ -117,7 +119,7 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
                 return context
 
             # Load the JSON database (assuming it's already in memory or loaded previously)
-            with open("C:\\Users\\choyd\\cs5787\\final\\dl_project\\FoodieQA\\rag\\baidu\\baidu_recipe_db\\all_recipes.json", "r", encoding="utf-8") as f:
+            with open("rag\\baidu\\baidu_recipe_db\\all_recipes.json", "r", encoding="utf-8") as f:
                 json_db = json.load(f)
 
             # Format the context for the given food name
@@ -128,6 +130,89 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
                 f"根据以下内容：\n{context}\n问题：{q}\n选项：{choices_str}",
                 "根据上下文和图片，我选择（"
             ]
+        
+        if template == 11:  # Visual Analysis Template
+            return [
+                """You are an AI assistant examining this dish visually. Question: {} 
+            Options: {}
+
+            Let me examine the image carefully for visual clues:
+
+            1. Surface & Texture:
+            - What's the outer appearance? (shiny/dry/crispy/soft)
+            - Can I see any distinct textures? (rough/smooth/flaky)
+            - Are there any visible layers or cross-sections?
+
+            2. Colors & Ingredients:
+            - What are the dominant colors?
+            - Can I spot specific ingredients? (peppers/herbs/sauces)
+            - Are there any characteristic garnishes?
+
+            3. Presentation & State:
+            - How is the dish arranged? (whole/pieces/mixed)
+            - What cooking effects are visible? (charring/browning/steaming)
+            - Are there any signature presentation elements?
+
+            Looking at these visual elements and comparing to the options...""".format(q, choices_str),
+                            "\nBased on these visible characteristics, I select ("
+            ]
+        
+        if template == 100:
+            def _format_wiki_context(food_name):
+                inspector = ChromaInspector()
+                entries = inspector.get_dish_entries(food_name)
+                if not entries:
+                    return ""
+                entry = entries[0]
+                context = entry["content"]
+                return "\n".join(context)
+            def _format_baidu_context(food_name, json_db):
+                """
+                Format the context using data from the JSON database.
+                :param food_name: Name of the food item to search for.
+                :param json_db: The JSON database loaded as a dictionary.
+                :return: Formatted context string.
+                """
+                # Attempt to find the dish by its name in the JSON keys
+                entry = json_db.get(food_name)
+                
+                if not entry:
+                    return "未找到与该食品名称相关的内容。"
+
+                # Extract relevant fields from the entry
+                dish_name = entry.get("dish_name", food_name)
+                cuisine_type = entry.get("cuisine_type", "未知菜系")
+                description = entry.get("description", "暂无描述。")
+                ingredients = entry.get("ingredients", [])
+                steps = entry.get("steps", [])
+                url = entry.get("url", "无可用链接。")
+
+                # Format the context
+                context = "\n".join([
+                    f"菜名: {dish_name}",
+                    f"菜系: {cuisine_type}",
+                    f"描述: {description if description else 'no descriptions'}",
+                    f"配料: {', '.join(ingredients) if ingredients else 'no ingredients'}",
+                    "步骤:",
+                    "\n".join(steps) if steps else "no steps",
+                    f"参考链接: {url}"
+                ])
+                return context
+            with open("rag\\baidu\\baidu_recipe_db\\all_recipes.json", "r", encoding="utf-8") as f:
+                json_db = json.load(f)
+            context = full_response
+            for food_name in predicted_food_names:
+                wiki_context = _format_wiki_context(food_name=food_name)
+                baidu_context = _format_baidu_context(food_name=food_name, json_db=json_db)
+                context.join(wiki_context)
+                context.join(baidu_context)
+            return [
+                f"根据以下内容：\n{context}\n问题：{q}\n选项：{choices_str}",
+                "根据上下文和图片，我选择（"]
+
+            
+            
+
 
         
     else:
@@ -141,30 +226,6 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
         if template == 3:
             return ["{} These are the options: {} Please select one of the options as your answer.".format(q, choices_str), "I would select ("]
             # return "Human: {} These are the options: {} Please select one of the options as your answer. Assistant: I would select (".format(q, choices_str)
-<<<<<<< HEAD
-        if template == 5:  # New RAG template
-            def _format_rag_context(food_name):
-                inspector = ChromaInspector()
-                entries = inspector.get_dish_entries(food_name)
-                if not entries:
-                    return ""
-                entry = entries[0]
-                # aspects = ['cuisine_type', 'flavor', 'region', 'main_ingredient', 'cooking_skills']
-                # context = []
-                # for aspect in aspects:
-                #     info = inspector.extract_info(entry['content'], aspect)
-                #     if info:
-                #         context.append(f"{aspect}: {'; '.join(info)}")
-                context = entry["content"]
-                return "\n".join(context)
-                
-            context = _format_rag_context(food_name=food_name)
-            return [
-                f"Based on this context:\n{context}\nQuestion: {q}\nOptions: {choices_str}",
-                "Based on the context and image, I select ("
-            ]
-        
-=======
         if template == 4:
             return [
                 "{} These are the options: {} Looking at the image carefully, I will examine each detail before selecting an answer.".format(q, choices_str),
@@ -180,7 +241,6 @@ def format_text_prompt(q, choices_str, template=0, lang="zh", food_name = ""):
                 "You are an AI assistant. Please answer the following multiple choice question based on the image. First, I'll identify what aspect this question is asking about (region, flavor, cuisine type, ingredients, presentation, or cooking skills). Question: {} Here are the options: {}".format(q, choices_str),
                 "After analyzing the image according to the question type, I select ("
             ]
->>>>>>> CoT
         
         if template == 7:
             question_guides = {
@@ -317,6 +377,13 @@ def get_prompt_idefics(question, data_dir, show_food_name=False, template=0, lan
                             ]}
                         ]
     return query_list
+
+def find_dish_info(dish_info, q_id):
+    for item in dish_info:
+        if item.get("question_id") == q_id:
+            predicted_dishes = item.get("predicted_dishes", [])
+            full_response = item.get("full_response", "")
+            return predicted_dishes, full_response
 
 
 
