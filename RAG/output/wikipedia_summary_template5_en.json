@@ -1,0 +1,7 @@
+{
+  "template": 5,
+  "total_questions": 256,
+  "total_correct": 164,
+  "accuracy": 0.640625,
+  "show_food_name": true
+}

@@ -1,0 +1,82 @@
+{
+  "analysis_timestamp": "2024-12-01T14:07:20.911278",
+  "performance_by_type": {
+    "cuisine_type": {
+      "total_questions": 70,
+      "correct_answers": 63,
+      "accuracy": 90.0
+    },
+    "flavor": {
+      "total_questions": 46,
+      "correct_answers": 30,
+      "accuracy": 65.22
+    },
+    "region-2": {
+      "total_questions": 65,
+      "correct_answers": 61,
+      "accuracy": 93.85
+    },
+    "present": {
+      "total_questions": 14,
+      "correct_answers": 10,
+      "accuracy": 71.43
+    },
+    "cooking-skills": {
+      "total_questions": 51,
+      "correct_answers": 46,
+      "accuracy": 90.2
+    },
+    "main-ingredient": {
+      "total_questions": 10,
+      "correct_answers": 8,
+      "accuracy": 80.0
+    }
+  },
+  "overall_performance": {
+    "total_questions": 256,
+    "total_correct": 218,
+    "accuracy": 85.16
+  },
+  "performance_summary": {
+    "best_performing_type": "region-2",
+    "worst_performing_type": "flavor",
+    "performance_ranking": [
+      {
+        "type": "flavor",
+        "accuracy": 65.22,
+        "total_questions": 46,
+        "correct_answers": 30
+      },
+      {
+        "type": "present",
+        "accuracy": 71.43,
+        "total_questions": 14,
+        "correct_answers": 10
+      },
+      {
+        "type": "main-ingredient",
+        "accuracy": 80.0,
+        "total_questions": 10,
+        "correct_answers": 8
+      },
+      {
+        "type": "cuisine_type",
+        "accuracy": 90.0,
+        "total_questions": 70,
+        "correct_answers": 63
+      },
+      {
+        "type": "cooking-skills",
+        "accuracy": 90.2,
+        "total_questions": 51,
+        "correct_answers": 46
+      },
+      {
+        "type": "region-2",
+        "accuracy": 93.85,
+        "total_questions": 65,
+        "correct_answers": 61
+      }
+    ]
+  }
+}
