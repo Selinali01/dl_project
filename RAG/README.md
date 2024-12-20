@@ -45,7 +45,7 @@ Our findings illustrate the transformative potential of RAG in improving FoodieQ
     pip install -r requirements.txt
     ```
 
-- Download datset from Huggingface and add to data_folder/images
+- Download datset from Huggingface and add to data_folder
 
 ```
 lyan62/FoodieQA

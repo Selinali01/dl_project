@@ -36,8 +36,12 @@ dl_project/
 git clone https://github.com/Selinali01/dl_project.git
 cd dl_project
 ```
+2. Download datset from Huggingface and add to data_folder
+```
+lyan62/FoodieQA
+```
 
-2. Choose the desired branch
+3. Choose the desired branch
 ```bash
 # For RAG implementation
 git checkout RAG
@@ -49,7 +53,7 @@ git checkout CoT
 git checkout RAG_CoT
 ```
 
-3. Install requirements
+4. Install requirements
 ```bash
 pip install -r requirements.txt
 ```
