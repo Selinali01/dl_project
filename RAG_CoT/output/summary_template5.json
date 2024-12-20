@@ -1,0 +1,13 @@
+{
+  "template": 5,
+<<<<<<< HEAD
+  "total_questions": 256,
+  "total_correct": 163,
+  "accuracy": 0.63671875,
+=======
+  "total_questions": 29,
+  "total_correct": 7,
+  "accuracy": 0.2413793103448276,
+>>>>>>> CoT
+  "show_food_name": false
+}
