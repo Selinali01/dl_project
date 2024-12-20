@@ -49,7 +49,7 @@ The CoT prompting strategy breaks down visual analysis into systematic steps:
     pip install -r requirements.txt
     ```
 
-- Download datset from Huggingface and add to data_folder
+- Download dataset from Huggingface and add to data_folder
 
 ```
 lyan62/FoodieQA
